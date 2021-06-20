@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: ["webpack-hot-middleware/client", "./src/main.js"],
+    main: ["webpack-hot-middleware/client?reload=true", "./src/index.js"],
   },
   mode: "development",
   output: {
@@ -20,6 +20,7 @@ module.exports = {
       colors: true,
     },
   },
+  devtool: "source-map",
   module: {
     rules: [
       {
