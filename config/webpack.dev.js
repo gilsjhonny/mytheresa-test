@@ -1,9 +1,10 @@
 const path = require("path");
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: ["./src/main.js"],
+    main: ["webpack-hot-middleware/client", "./src/main.js"],
   },
   mode: "development",
   output: {
@@ -14,6 +15,10 @@ module.exports = {
   devServer: {
     contentBase: "dist",
     overlay: true,
+    hot: true,
+    stats: {
+      colors: true,
+    },
   },
   module: {
     rules: [
@@ -37,5 +42,6 @@ module.exports = {
       filename: "index.html",
       template: "./src/index.html",
     }),
+    new webpack.HotModuleReplacementPlugin(),
   ],
 };
