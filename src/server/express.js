@@ -7,21 +7,25 @@ import webpackHotMiddleware from "webpack-hot-middleware";
 
 const server = express();
 
-// WEBPACK MIDDLEWARES
-// --------------------------------------------
-const compiler = webpack(config);
+const isProd = process.env.NODE_ENV === "production";
 
-// Allows serving of the files emitted from webpack
-server.use(webpackDevMiddleware(compiler, config.devServer));
+if (!isProd) {
+  // WEBPACK MIDDLEWARES
+  // --------------------------------------------
+  const compiler = webpack(config);
 
-// Allows hot reloading into an existing server
-server.use(webpackHotMiddleware(compiler));
-// --------------------------------------------
+  // Allows serving of the files emitted from webpack
+  server.use(webpackDevMiddleware(compiler, config.devServer));
+
+  // Allows hot reloading into an existing server
+  server.use(webpackHotMiddleware(compiler));
+  // --------------------------------------------
+}
 
 // STATIC MIDDLEWARE
 const staticMiddleware = express.static("dist");
 server.use(staticMiddleware);
 
-server.listen(8080, () => {
+server.listen(process.env.PORT || 8080, () => {
   console.log("Server is listening");
 });
