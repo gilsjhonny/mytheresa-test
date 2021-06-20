@@ -2,15 +2,17 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "858e668deead1dc601ea",
-  "time": 2004,
-  "builtAt": 1624224238688,
+  "hash": "81b98f5dcba1cde73bf2",
+  "time": 61,
+  "builtAt": 1624231919275,
   "publicPath": "/",
   "outputPath": "/home/gilsjhonny/code/mytheresa-test/dist",
   "assetsByChunkName": {
     "main": [
       "main-bundle.js",
-      "main-bundle.js.map"
+      "main.0afd83db61471e1eaa72.hot-update.js",
+      "main-bundle.js.map",
+      "main.0afd83db61471e1eaa72.hot-update.js.map"
     ],
     "vendors~main": [
       "vendors~main-bundle.js",
@@ -19,16 +21,19 @@
   },
   "assets": [
     {
-      "name": "index.html",
-      "size": 493,
+      "name": "0afd83db61471e1eaa72.hot-update.json",
+      "size": 46,
       "chunks": [],
       "chunkNames": [],
-      "info": {},
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
       "emitted": true
     },
     {
       "name": "main-bundle.js",
-      "size": 48411,
+      "size": 62502,
       "chunks": [
         "main"
       ],
@@ -40,7 +45,36 @@
     },
     {
       "name": "main-bundle.js.map",
-      "size": 39961,
+      "size": 45300,
+      "chunks": [
+        "main"
+      ],
+      "chunkNames": [
+        "main"
+      ],
+      "info": {
+        "development": true
+      },
+      "emitted": true
+    },
+    {
+      "name": "main.0afd83db61471e1eaa72.hot-update.js",
+      "size": 2126,
+      "chunks": [
+        "main"
+      ],
+      "chunkNames": [
+        "main"
+      ],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": true
+    },
+    {
+      "name": "main.0afd83db61471e1eaa72.hot-update.js.map",
+      "size": 834,
       "chunks": [
         "main"
       ],
@@ -62,7 +96,7 @@
         "vendors~main"
       ],
       "info": {},
-      "emitted": true
+      "emitted": false
     },
     {
       "name": "vendors~main-bundle.js.map",
@@ -76,7 +110,7 @@
       "info": {
         "development": true
       },
-      "emitted": true
+      "emitted": false
     }
   ],
   "filteredAssets": 0,
@@ -90,7 +124,9 @@
         "vendors~main-bundle.js",
         "vendors~main-bundle.js.map",
         "main-bundle.js",
-        "main-bundle.js.map"
+        "main.0afd83db61471e1eaa72.hot-update.js",
+        "main-bundle.js.map",
+        "main.0afd83db61471e1eaa72.hot-update.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -106,7 +142,9 @@
         "vendors~main-bundle.js",
         "vendors~main-bundle.js.map",
         "main-bundle.js",
-        "main-bundle.js.map"
+        "main.0afd83db61471e1eaa72.hot-update.js",
+        "main-bundle.js.map",
+        "main.0afd83db61471e1eaa72.hot-update.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -118,15 +156,17 @@
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 7168,
+      "size": 13190,
       "names": [
         "main"
       ],
       "files": [
         "main-bundle.js",
-        "main-bundle.js.map"
+        "main.0afd83db61471e1eaa72.hot-update.js",
+        "main-bundle.js.map",
+        "main.0afd83db61471e1eaa72.hot-update.js.map"
       ],
-      "hash": "138763f412445dfad7db",
+      "hash": "6c63873ba483cc4f98fe",
       "siblings": [
         "vendors~main"
       ],
@@ -139,9 +179,9 @@
           "identifier": "multi webpack-hot-middleware/client?reload=true ./src/index.js",
           "name": "multi webpack-hot-middleware/client?reload=true ./src/index.js",
           "index": 0,
-          "index2": 48,
+          "index2": 54,
           "size": 40,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -172,9 +212,9 @@
           "id": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/App.sass",
           "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/App.sass",
           "name": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/App.sass",
-          "index": 46,
-          "index2": 44,
-          "size": 777,
+          "index": 54,
+          "index2": 50,
+          "size": 498,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -308,17 +348,179 @@
           ],
           "optimizationBailout": [],
           "depth": 4,
-          "source": "// Imports\nimport ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from \"../node_modules/css-loader/dist/runtime/cssWithMappingToString.js\";\nimport ___CSS_LOADER_API_IMPORT___ from \"../node_modules/css-loader/dist/runtime/api.js\";\nvar ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"body {\\n  background: pink; }\\n\\nh1 {\\n  color: purple;\\n  border: 2px solid red; }\\n\", \"\",{\"version\":3,\"sources\":[\"webpack://./src/App.sass\"],\"names\":[],\"mappings\":\"AAAA;EACI,gBAAgB,EAAA;;AAEpB;EACI,aAAa;EACb,qBAAqB,EAAA\",\"sourcesContent\":[\"body {\\n    background: pink; }\\n\\nh1 {\\n    color: purple;\\n    border: 2px solid red; }\\n\"],\"sourceRoot\":\"\"}]);\n// Exports\nexport default ___CSS_LOADER_EXPORT___;\n"
+          "source": "// Imports\nimport ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from \"../node_modules/css-loader/dist/runtime/cssWithMappingToString.js\";\nimport ___CSS_LOADER_API_IMPORT___ from \"../node_modules/css-loader/dist/runtime/api.js\";\nvar ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"\", \"\",{\"version\":3,\"sources\":[],\"names\":[],\"mappings\":\"\",\"sourceRoot\":\"\"}]);\n// Exports\nexport default ___CSS_LOADER_EXPORT___;\n"
+        },
+        {
+          "id": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+          "name": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+          "index": 50,
+          "index2": 44,
+          "size": 1358,
+          "cacheable": true,
+          "built": false,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "main"
+          ],
+          "issuer": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+          "issuerId": "./src/app/components/MovieCard/index.sass",
+          "issuerName": "./src/app/components/MovieCard/index.sass",
+          "issuerPath": [
+            {
+              "id": 0,
+              "identifier": "multi webpack-hot-middleware/client?reload=true ./src/index.js",
+              "name": "multi webpack-hot-middleware/client?reload=true ./src/index.js"
+            },
+            {
+              "id": "./src/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/index.js",
+              "name": "./src/index.js"
+            },
+            {
+              "id": "./src/App.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/App.js",
+              "name": "./src/App.js"
+            },
+            {
+              "id": "./src/app/pages/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/index.js",
+              "name": "./src/app/pages/index.js"
+            },
+            {
+              "id": "./src/app/pages/Home/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+              "name": "./src/app/pages/Home/index.js"
+            },
+            {
+              "id": "./src/app/components/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/index.js",
+              "name": "./src/app/components/index.js"
+            },
+            {
+              "id": "./src/app/components/MovieCard/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+              "name": "./src/app/components/MovieCard/index.js"
+            },
+            {
+              "id": "./src/app/components/MovieCard/index.sass",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+              "name": "./src/app/components/MovieCard/index.sass"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": "./src/app/components/MovieCard/index.sass",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+              "module": "./src/app/components/MovieCard/index.sass",
+              "moduleName": "./src/app/components/MovieCard/index.sass",
+              "type": "harmony side effect evaluation",
+              "userRequest": "!!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./index.sass",
+              "loc": "2:12-146"
+            },
+            {
+              "moduleId": "./src/app/components/MovieCard/index.sass",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+              "module": "./src/app/components/MovieCard/index.sass",
+              "moduleName": "./src/app/components/MovieCard/index.sass",
+              "type": "harmony import specifier",
+              "userRequest": "!!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./index.sass",
+              "loc": "9:17-24"
+            },
+            {
+              "moduleId": "./src/app/components/MovieCard/index.sass",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+              "module": "./src/app/components/MovieCard/index.sass",
+              "moduleName": "./src/app/components/MovieCard/index.sass",
+              "type": "harmony import specifier",
+              "userRequest": "!!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./index.sass",
+              "loc": "13:7-14"
+            },
+            {
+              "moduleId": "./src/app/components/MovieCard/index.sass",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+              "module": "./src/app/components/MovieCard/index.sass",
+              "moduleName": "./src/app/components/MovieCard/index.sass",
+              "type": "harmony import specifier",
+              "userRequest": "!!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./index.sass",
+              "loc": "45:20-27"
+            },
+            {
+              "moduleId": "./src/app/components/MovieCard/index.sass",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+              "module": "./src/app/components/MovieCard/index.sass",
+              "moduleName": "./src/app/components/MovieCard/index.sass",
+              "type": "module.hot.accept",
+              "userRequest": "!!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./index.sass",
+              "loc": "47:4-60:5"
+            },
+            {
+              "moduleId": "./src/app/components/MovieCard/index.sass",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+              "module": "./src/app/components/MovieCard/index.sass",
+              "moduleName": "./src/app/components/MovieCard/index.sass",
+              "type": "harmony accept",
+              "userRequest": "!!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./index.sass",
+              "loc": "49:6-59:7"
+            },
+            {
+              "moduleId": "./src/app/components/MovieCard/index.sass",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+              "module": "./src/app/components/MovieCard/index.sass",
+              "moduleName": "./src/app/components/MovieCard/index.sass",
+              "type": "harmony import specifier",
+              "userRequest": "!!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./index.sass",
+              "loc": "50:38-45"
+            },
+            {
+              "moduleId": "./src/app/components/MovieCard/index.sass",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+              "module": "./src/app/components/MovieCard/index.sass",
+              "moduleName": "./src/app/components/MovieCard/index.sass",
+              "type": "harmony import specifier",
+              "userRequest": "!!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./index.sass",
+              "loc": "56:26-33"
+            },
+            {
+              "moduleId": "./src/app/components/MovieCard/index.sass",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+              "module": "./src/app/components/MovieCard/index.sass",
+              "moduleName": "./src/app/components/MovieCard/index.sass",
+              "type": "harmony import specifier",
+              "userRequest": "!!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./index.sass",
+              "loc": "58:21-28"
+            },
+            {
+              "moduleId": "./src/app/components/MovieCard/index.sass",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+              "module": "./src/app/components/MovieCard/index.sass",
+              "moduleName": "./src/app/components/MovieCard/index.sass",
+              "type": "harmony import specifier",
+              "userRequest": "!!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./index.sass",
+              "loc": "68:15-22"
+            }
+          ],
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [],
+          "depth": 8,
+          "source": "// Imports\nimport ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from \"../../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js\";\nimport ___CSS_LOADER_API_IMPORT___ from \"../../../../node_modules/css-loader/dist/runtime/api.js\";\nvar ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \".MovieCard {\\n  display: flex;\\n  flex-direction: column; }\\n  .MovieCard__thumbnail-container {\\n    display: flex;\\n    justify-content: center;\\n    align-items: center;\\n    border-radius: 25px;\\n    height: 350px;\\n    width: 250px;\\n    overflow: hidden; }\\n    .MovieCard__thumbnail-container img {\\n      width: 120%; }\\n\", \"\",{\"version\":3,\"sources\":[\"webpack://./src/app/components/MovieCard/index.sass\"],\"names\":[],\"mappings\":\"AAAA;EACE,aAAa;EACb,sBAAsB,EAAA;EAEtB;IACE,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IAEnB,mBAAmB;IAEnB,aAAa;IACb,YAAY;IACZ,gBAAgB,EAAA;IATjB;MAWG,WAAW,EAAA\",\"sourcesContent\":[\".MovieCard {\\n  display: flex;\\n  flex-direction: column;\\n\\n  &__thumbnail-container {\\n    display: flex;\\n    justify-content: center;\\n    align-items: center;\\n\\n    border-radius: 25px;\\n\\n    height: 350px;\\n    width: 250px;\\n    overflow: hidden;\\n    img {\\n      width: 120%; } } }\\n\"],\"sourceRoot\":\"\"}]);\n// Exports\nexport default ___CSS_LOADER_EXPORT___;\n"
         },
         {
           "id": "./src/App.js",
           "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/App.js",
           "name": "./src/App.js",
           "index": 26,
-          "index2": 46,
-          "size": 4599,
+          "index2": 52,
+          "size": 4621,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -368,17 +570,17 @@
           ],
           "optimizationBailout": [],
           "depth": 2,
-          "source": "function _typeof(obj) { \"@babel/helpers - typeof\"; if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\n(function () {\n  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;\n  enterModule && enterModule(module);\n})();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nfunction _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _isNativeReflectConstruct() { if (typeof Reflect === \"undefined\" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === \"function\") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nvar __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal[\"default\"].signature : function (a) {\n  return a;\n};\n\nimport { hot } from \"react-hot-loader/root\";\nimport React from \"react\";\nimport \"./App.sass\";\n\nvar App = /*#__PURE__*/function (_React$Component) {\n  _inherits(App, _React$Component);\n\n  var _super = _createSuper(App);\n\n  function App() {\n    _classCallCheck(this, App);\n\n    return _super.apply(this, arguments);\n  }\n\n  _createClass(App, [{\n    key: \"render\",\n    value: function render() {\n      return /*#__PURE__*/React.createElement(\"div\", null, /*#__PURE__*/React.createElement(\"h1\", null, \"The Movies\"));\n    }\n  }, {\n    key: \"__reactstandin__regenerateByEval\",\n    value: // @ts-ignore\n    function __reactstandin__regenerateByEval(key, code) {\n      // @ts-ignore\n      this[key] = eval(code);\n    }\n  }]);\n\n  return App;\n}(React.Component);\n\nvar _default = hot(App);\n\nexport default _default;\n;\n\n(function () {\n  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(App, \"App\", \"/home/gilsjhonny/code/mytheresa-test/src/App.js\");\n  reactHotLoader.register(_default, \"default\", \"/home/gilsjhonny/code/mytheresa-test/src/App.js\");\n})();\n\n;\n\n(function () {\n  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;\n  leaveModule && leaveModule(module);\n})();"
+          "source": "function _typeof(obj) { \"@babel/helpers - typeof\"; if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\n(function () {\n  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;\n  enterModule && enterModule(module);\n})();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nfunction _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _isNativeReflectConstruct() { if (typeof Reflect === \"undefined\" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === \"function\") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nvar __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal[\"default\"].signature : function (a) {\n  return a;\n};\n\nimport { hot } from \"react-hot-loader/root\";\nimport React from \"react\";\nimport { Home } from \"./app/pages\";\nimport \"./App.sass\";\n\nvar App = /*#__PURE__*/function (_React$Component) {\n  _inherits(App, _React$Component);\n\n  var _super = _createSuper(App);\n\n  function App() {\n    _classCallCheck(this, App);\n\n    return _super.apply(this, arguments);\n  }\n\n  _createClass(App, [{\n    key: \"render\",\n    value: function render() {\n      return /*#__PURE__*/React.createElement(\"div\", null, /*#__PURE__*/React.createElement(Home, null));\n    }\n  }, {\n    key: \"__reactstandin__regenerateByEval\",\n    value: // @ts-ignore\n    function __reactstandin__regenerateByEval(key, code) {\n      // @ts-ignore\n      this[key] = eval(code);\n    }\n  }]);\n\n  return App;\n}(React.Component);\n\nvar _default = hot(App);\n\nexport default _default;\n;\n\n(function () {\n  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(App, \"App\", \"/home/gilsjhonny/code/mytheresa-test/src/App.js\");\n  reactHotLoader.register(_default, \"default\", \"/home/gilsjhonny/code/mytheresa-test/src/App.js\");\n})();\n\n;\n\n(function () {\n  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;\n  leaveModule && leaveModule(module);\n})();"
         },
         {
           "id": "./src/App.sass",
           "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/App.sass",
           "name": "./src/App.sass",
-          "index": 44,
-          "index2": 45,
+          "index": 53,
+          "index2": 51,
           "size": 1427,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -416,7 +618,7 @@
               "moduleName": "./src/App.js",
               "type": "harmony side effect evaluation",
               "userRequest": "./App.sass",
-              "loc": "34:0-20"
+              "loc": "35:0-20"
             }
           ],
           "providedExports": [
@@ -427,14 +629,380 @@
           "source": "import api from \"!../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\";\n            import content from \"!!../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./App.sass\";\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\n\nif (module.hot) {\n  if (!content.locals || module.hot.invalidate) {\n    var isEqualLocals = function isEqualLocals(a, b, isNamedExport) {\n  if (!a && b || a && !b) {\n    return false;\n  }\n\n  var p;\n\n  for (p in a) {\n    if (isNamedExport && p === 'default') {\n      // eslint-disable-next-line no-continue\n      continue;\n    }\n\n    if (a[p] !== b[p]) {\n      return false;\n    }\n  }\n\n  for (p in b) {\n    if (isNamedExport && p === 'default') {\n      // eslint-disable-next-line no-continue\n      continue;\n    }\n\n    if (!a[p]) {\n      return false;\n    }\n  }\n\n  return true;\n};\n    var oldLocals = content.locals;\n\n    module.hot.accept(\n      \"!!../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./App.sass\",\n      function () {\n        if (!isEqualLocals(oldLocals, content.locals, undefined)) {\n                module.hot.invalidate();\n\n                return;\n              }\n\n              oldLocals = content.locals;\n\n              update(content);\n      }\n    )\n  }\n\n  module.hot.dispose(function() {\n    update();\n  });\n}\n\nexport default content.locals || {};"
         },
         {
+          "id": "./src/app/components/MovieCard/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+          "name": "./src/app/components/MovieCard/index.js",
+          "index": 47,
+          "index2": 46,
+          "size": 1867,
+          "cacheable": true,
+          "built": false,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "main"
+          ],
+          "issuer": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/index.js",
+          "issuerId": "./src/app/components/index.js",
+          "issuerName": "./src/app/components/index.js",
+          "issuerPath": [
+            {
+              "id": 0,
+              "identifier": "multi webpack-hot-middleware/client?reload=true ./src/index.js",
+              "name": "multi webpack-hot-middleware/client?reload=true ./src/index.js"
+            },
+            {
+              "id": "./src/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/index.js",
+              "name": "./src/index.js"
+            },
+            {
+              "id": "./src/App.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/App.js",
+              "name": "./src/App.js"
+            },
+            {
+              "id": "./src/app/pages/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/index.js",
+              "name": "./src/app/pages/index.js"
+            },
+            {
+              "id": "./src/app/pages/Home/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+              "name": "./src/app/pages/Home/index.js"
+            },
+            {
+              "id": "./src/app/components/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/index.js",
+              "name": "./src/app/components/index.js"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": "./src/app/components/index.js",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/index.js",
+              "module": "./src/app/components/index.js",
+              "moduleName": "./src/app/components/index.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "./MovieCard",
+              "loc": "5:0-51"
+            },
+            {
+              "moduleId": "./src/app/components/index.js",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/index.js",
+              "module": "./src/app/components/index.js",
+              "moduleName": "./src/app/components/index.js",
+              "type": "harmony export imported specifier",
+              "userRequest": "./MovieCard",
+              "loc": "5:0-51"
+            }
+          ],
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [],
+          "depth": 6,
+          "source": "(function () {\n  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;\n  enterModule && enterModule(module);\n})();\n\nvar __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal[\"default\"].signature : function (a) {\n  return a;\n};\n\nimport React from \"react\";\nimport \"./index.sass\";\n\nvar MovieCard = function MovieCard(props) {\n  var _props$title = props.title,\n      title = _props$title === void 0 ? \"No Title\" : _props$title,\n      _props$date = props.date,\n      date = _props$date === void 0 ? \"Unknown\" : _props$date;\n  return /*#__PURE__*/React.createElement(\"div\", {\n    className: \"MovieCard\"\n  }, /*#__PURE__*/React.createElement(\"div\", {\n    className: \"MovieCard__thumbnail-container\"\n  }, /*#__PURE__*/React.createElement(\"img\", {\n    alt: \"movie-poster\",\n    src: \"https://www.themoviedb.org/t/p/w500/nyDU092PeGGcd6wUIzlhFoaWcyX.jpg\"\n  })), /*#__PURE__*/React.createElement(\"div\", {\n    className: \"MovieCard__info\"\n  }, /*#__PURE__*/React.createElement(\"div\", {\n    className: \"MovieCard__info__title\"\n  }, title), /*#__PURE__*/React.createElement(\"div\", {\n    className: \"MovieCard__info__date\"\n  }, date)));\n};\n\nvar _default = MovieCard;\nexport default _default;\n;\n\n(function () {\n  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(MovieCard, \"MovieCard\", \"/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js\");\n  reactHotLoader.register(_default, \"default\", \"/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js\");\n})();\n\n;\n\n(function () {\n  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;\n  leaveModule && leaveModule(module);\n})();"
+        },
+        {
+          "id": "./src/app/components/MovieCard/index.sass",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+          "name": "./src/app/components/MovieCard/index.sass",
+          "index": 48,
+          "index2": 45,
+          "size": 1476,
+          "cacheable": true,
+          "built": false,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "main"
+          ],
+          "issuer": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+          "issuerId": "./src/app/components/MovieCard/index.js",
+          "issuerName": "./src/app/components/MovieCard/index.js",
+          "issuerPath": [
+            {
+              "id": 0,
+              "identifier": "multi webpack-hot-middleware/client?reload=true ./src/index.js",
+              "name": "multi webpack-hot-middleware/client?reload=true ./src/index.js"
+            },
+            {
+              "id": "./src/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/index.js",
+              "name": "./src/index.js"
+            },
+            {
+              "id": "./src/App.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/App.js",
+              "name": "./src/App.js"
+            },
+            {
+              "id": "./src/app/pages/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/index.js",
+              "name": "./src/app/pages/index.js"
+            },
+            {
+              "id": "./src/app/pages/Home/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+              "name": "./src/app/pages/Home/index.js"
+            },
+            {
+              "id": "./src/app/components/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/index.js",
+              "name": "./src/app/components/index.js"
+            },
+            {
+              "id": "./src/app/components/MovieCard/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+              "name": "./src/app/components/MovieCard/index.js"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": "./src/app/components/MovieCard/index.js",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+              "module": "./src/app/components/MovieCard/index.js",
+              "moduleName": "./src/app/components/MovieCard/index.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "./index.sass",
+              "loc": "11:0-22"
+            }
+          ],
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [],
+          "depth": 7,
+          "source": "import api from \"!../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\";\n            import content from \"!!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./index.sass\";\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\n\nif (module.hot) {\n  if (!content.locals || module.hot.invalidate) {\n    var isEqualLocals = function isEqualLocals(a, b, isNamedExport) {\n  if (!a && b || a && !b) {\n    return false;\n  }\n\n  var p;\n\n  for (p in a) {\n    if (isNamedExport && p === 'default') {\n      // eslint-disable-next-line no-continue\n      continue;\n    }\n\n    if (a[p] !== b[p]) {\n      return false;\n    }\n  }\n\n  for (p in b) {\n    if (isNamedExport && p === 'default') {\n      // eslint-disable-next-line no-continue\n      continue;\n    }\n\n    if (!a[p]) {\n      return false;\n    }\n  }\n\n  return true;\n};\n    var oldLocals = content.locals;\n\n    module.hot.accept(\n      \"!!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./index.sass\",\n      function () {\n        if (!isEqualLocals(oldLocals, content.locals, undefined)) {\n                module.hot.invalidate();\n\n                return;\n              }\n\n              oldLocals = content.locals;\n\n              update(content);\n      }\n    )\n  }\n\n  module.hot.dispose(function() {\n    update();\n  });\n}\n\nexport default content.locals || {};"
+        },
+        {
+          "id": "./src/app/components/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/index.js",
+          "name": "./src/app/components/index.js",
+          "index": 46,
+          "index2": 47,
+          "size": 192,
+          "cacheable": true,
+          "built": false,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "main"
+          ],
+          "issuer": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+          "issuerId": "./src/app/pages/Home/index.js",
+          "issuerName": "./src/app/pages/Home/index.js",
+          "issuerPath": [
+            {
+              "id": 0,
+              "identifier": "multi webpack-hot-middleware/client?reload=true ./src/index.js",
+              "name": "multi webpack-hot-middleware/client?reload=true ./src/index.js"
+            },
+            {
+              "id": "./src/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/index.js",
+              "name": "./src/index.js"
+            },
+            {
+              "id": "./src/App.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/App.js",
+              "name": "./src/App.js"
+            },
+            {
+              "id": "./src/app/pages/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/index.js",
+              "name": "./src/app/pages/index.js"
+            },
+            {
+              "id": "./src/app/pages/Home/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+              "name": "./src/app/pages/Home/index.js"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": "./src/app/pages/Home/index.js",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+              "module": "./src/app/pages/Home/index.js",
+              "moduleName": "./src/app/pages/Home/index.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "../../components",
+              "loc": "11:0-45"
+            },
+            {
+              "moduleId": "./src/app/pages/Home/index.js",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+              "module": "./src/app/pages/Home/index.js",
+              "moduleName": "./src/app/pages/Home/index.js",
+              "type": "harmony import specifier",
+              "userRequest": "../../components",
+              "loc": "14:142-151"
+            }
+          ],
+          "providedExports": [
+            "MovieCard"
+          ],
+          "optimizationBailout": [],
+          "depth": 5,
+          "source": "var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal[\"default\"].signature : function (a) {\n  return a;\n};\n\nexport { default as MovieCard } from \"./MovieCard\";"
+        },
+        {
+          "id": "./src/app/pages/Home/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+          "name": "./src/app/pages/Home/index.js",
+          "index": 45,
+          "index2": 48,
+          "size": 1204,
+          "cacheable": true,
+          "built": false,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "main"
+          ],
+          "issuer": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/index.js",
+          "issuerId": "./src/app/pages/index.js",
+          "issuerName": "./src/app/pages/index.js",
+          "issuerPath": [
+            {
+              "id": 0,
+              "identifier": "multi webpack-hot-middleware/client?reload=true ./src/index.js",
+              "name": "multi webpack-hot-middleware/client?reload=true ./src/index.js"
+            },
+            {
+              "id": "./src/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/index.js",
+              "name": "./src/index.js"
+            },
+            {
+              "id": "./src/App.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/App.js",
+              "name": "./src/App.js"
+            },
+            {
+              "id": "./src/app/pages/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/index.js",
+              "name": "./src/app/pages/index.js"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": "./src/app/pages/index.js",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/index.js",
+              "module": "./src/app/pages/index.js",
+              "moduleName": "./src/app/pages/index.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "./Home",
+              "loc": "5:0-41"
+            },
+            {
+              "moduleId": "./src/app/pages/index.js",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/index.js",
+              "module": "./src/app/pages/index.js",
+              "moduleName": "./src/app/pages/index.js",
+              "type": "harmony export imported specifier",
+              "userRequest": "./Home",
+              "loc": "5:0-41"
+            }
+          ],
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [],
+          "depth": 4,
+          "source": "(function () {\n  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;\n  enterModule && enterModule(module);\n})();\n\nvar __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal[\"default\"].signature : function (a) {\n  return a;\n};\n\nimport React from \"react\";\nimport { MovieCard } from \"../../components\";\n\nvar Home = function Home() {\n  return /*#__PURE__*/React.createElement(\"div\", null, /*#__PURE__*/React.createElement(\"h1\", null, \"Home\"), /*#__PURE__*/React.createElement(MovieCard, null));\n};\n\nvar _default = Home;\nexport default _default;\n;\n\n(function () {\n  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(Home, \"Home\", \"/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js\");\n  reactHotLoader.register(_default, \"default\", \"/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js\");\n})();\n\n;\n\n(function () {\n  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;\n  leaveModule && leaveModule(module);\n})();"
+        },
+        {
+          "id": "./src/app/pages/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/index.js",
+          "name": "./src/app/pages/index.js",
+          "index": 44,
+          "index2": 49,
+          "size": 182,
+          "cacheable": true,
+          "built": false,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "main"
+          ],
+          "issuer": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/App.js",
+          "issuerId": "./src/App.js",
+          "issuerName": "./src/App.js",
+          "issuerPath": [
+            {
+              "id": 0,
+              "identifier": "multi webpack-hot-middleware/client?reload=true ./src/index.js",
+              "name": "multi webpack-hot-middleware/client?reload=true ./src/index.js"
+            },
+            {
+              "id": "./src/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/index.js",
+              "name": "./src/index.js"
+            },
+            {
+              "id": "./src/App.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/App.js",
+              "name": "./src/App.js"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": "./src/App.js",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/App.js",
+              "module": "./src/App.js",
+              "moduleName": "./src/App.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "./app/pages",
+              "loc": "34:0-35"
+            },
+            {
+              "moduleId": "./src/App.js",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/App.js",
+              "module": "./src/App.js",
+              "moduleName": "./src/App.js",
+              "type": "harmony import specifier",
+              "userRequest": "./app/pages",
+              "loc": "51:92-96"
+            }
+          ],
+          "providedExports": [
+            "Home"
+          ],
+          "optimizationBailout": [],
+          "depth": 3,
+          "source": "var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal[\"default\"].signature : function (a) {\n  return a;\n};\n\nexport { default as Home } from \"./Home\";"
+        },
+        {
           "id": "./src/index.js",
           "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/index.js",
           "name": "./src/index.js",
           "index": 16,
-          "index2": 47,
+          "index2": 53,
           "size": 325,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -485,7 +1053,7 @@
     },
     {
       "id": "vendors~main",
-      "rendered": true,
+      "rendered": false,
       "initial": true,
       "entry": false,
       "reason": "split chunk (cache group: vendors) (name: vendors~main)",
@@ -513,7 +1081,7 @@
           "index2": 6,
           "size": 4263,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -563,19 +1131,19 @@
           "id": "./node_modules/css-loader/dist/runtime/api.js",
           "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/runtime/api.js",
           "name": "./node_modules/css-loader/dist/runtime/api.js",
-          "index": 48,
+          "index": 52,
           "index2": 43,
           "size": 1605,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
             "vendors~main"
           ],
-          "issuer": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/App.sass",
-          "issuerId": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/App.sass",
-          "issuerName": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/App.sass",
+          "issuer": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+          "issuerId": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+          "issuerName": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
           "issuerPath": [
             {
               "id": 0,
@@ -593,14 +1161,34 @@
               "name": "./src/App.js"
             },
             {
-              "id": "./src/App.sass",
-              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/App.sass",
-              "name": "./src/App.sass"
+              "id": "./src/app/pages/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/index.js",
+              "name": "./src/app/pages/index.js"
             },
             {
-              "id": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/App.sass",
-              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/App.sass",
-              "name": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/App.sass"
+              "id": "./src/app/pages/Home/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+              "name": "./src/app/pages/Home/index.js"
+            },
+            {
+              "id": "./src/app/components/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/index.js",
+              "name": "./src/app/components/index.js"
+            },
+            {
+              "id": "./src/app/components/MovieCard/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+              "name": "./src/app/components/MovieCard/index.js"
+            },
+            {
+              "id": "./src/app/components/MovieCard/index.sass",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+              "name": "./src/app/components/MovieCard/index.sass"
+            },
+            {
+              "id": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+              "name": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass"
             }
           ],
           "failed": false,
@@ -625,6 +1213,24 @@
               "type": "harmony import specifier",
               "userRequest": "../node_modules/css-loader/dist/runtime/api.js",
               "loc": "4:30-57"
+            },
+            {
+              "moduleId": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+              "module": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+              "moduleName": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+              "type": "harmony side effect evaluation",
+              "userRequest": "../../../../node_modules/css-loader/dist/runtime/api.js",
+              "loc": "3:0-98"
+            },
+            {
+              "moduleId": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+              "module": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+              "moduleName": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+              "type": "harmony import specifier",
+              "userRequest": "../../../../node_modules/css-loader/dist/runtime/api.js",
+              "loc": "4:30-57"
             }
           ],
           "providedExports": null,
@@ -636,19 +1242,19 @@
           "id": "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js",
           "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/runtime/cssWithMappingToString.js",
           "name": "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js",
-          "index": 47,
+          "index": 51,
           "index2": 42,
           "size": 2278,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
             "vendors~main"
           ],
-          "issuer": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/App.sass",
-          "issuerId": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/App.sass",
-          "issuerName": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/App.sass",
+          "issuer": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+          "issuerId": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+          "issuerName": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
           "issuerPath": [
             {
               "id": 0,
@@ -666,14 +1272,34 @@
               "name": "./src/App.js"
             },
             {
-              "id": "./src/App.sass",
-              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/App.sass",
-              "name": "./src/App.sass"
+              "id": "./src/app/pages/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/index.js",
+              "name": "./src/app/pages/index.js"
             },
             {
-              "id": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/App.sass",
-              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/App.sass",
-              "name": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/App.sass"
+              "id": "./src/app/pages/Home/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+              "name": "./src/app/pages/Home/index.js"
+            },
+            {
+              "id": "./src/app/components/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/index.js",
+              "name": "./src/app/components/index.js"
+            },
+            {
+              "id": "./src/app/components/MovieCard/index.js",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+              "name": "./src/app/components/MovieCard/index.js"
+            },
+            {
+              "id": "./src/app/components/MovieCard/index.sass",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+              "name": "./src/app/components/MovieCard/index.sass"
+            },
+            {
+              "id": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+              "name": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass"
             }
           ],
           "failed": false,
@@ -698,6 +1324,24 @@
               "type": "harmony import specifier",
               "userRequest": "../node_modules/css-loader/dist/runtime/cssWithMappingToString.js",
               "loc": "4:58-95"
+            },
+            {
+              "moduleId": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+              "module": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+              "moduleName": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+              "type": "harmony side effect evaluation",
+              "userRequest": "../../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js",
+              "loc": "2:0-127"
+            },
+            {
+              "moduleId": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+              "module": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+              "moduleName": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+              "type": "harmony import specifier",
+              "userRequest": "../../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js",
+              "loc": "4:58-95"
             }
           ],
           "providedExports": null,
@@ -713,7 +1357,7 @@
           "index2": 29,
           "size": 3932,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -782,7 +1426,7 @@
           "index2": 37,
           "size": 2743,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -851,7 +1495,7 @@
           "index2": 9,
           "size": 7500,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -910,7 +1554,7 @@
           "index2": 10,
           "size": 50049,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -969,7 +1613,7 @@
           "index2": 11,
           "size": 449,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -1023,7 +1667,7 @@
           "index2": 7,
           "size": 668,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -1105,7 +1749,7 @@
           "index2": 8,
           "size": 3792,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -1164,7 +1808,7 @@
           "index2": 15,
           "size": 2108,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -1241,7 +1885,7 @@
           "index2": 33,
           "size": 3781,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -1320,7 +1964,7 @@
           "index2": 34,
           "size": 21563,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -1394,7 +2038,7 @@
           "index2": 35,
           "size": 710,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -1463,7 +2107,7 @@
           "index2": 32,
           "size": 314,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -1551,7 +2195,7 @@
           "index2": 1,
           "size": 2510,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -1605,7 +2249,7 @@
           "index2": 2,
           "size": 2544,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -1659,7 +2303,7 @@
           "index2": 3,
           "size": 127,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -1708,7 +2352,7 @@
           "index2": 22,
           "size": 894563,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -1762,7 +2406,7 @@
           "index2": 23,
           "size": 1363,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -1829,7 +2473,7 @@
           "index2": 38,
           "size": 100517,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -1893,7 +2537,7 @@
           "index2": 25,
           "size": 1103,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -1966,7 +2610,7 @@
           "index2": 39,
           "size": 1591,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -2025,7 +2669,7 @@
           "index2": 40,
           "size": 939,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -2072,7 +2716,7 @@
               "moduleName": "./src/App.js",
               "type": "harmony import specifier",
               "userRequest": "react-hot-loader/root",
-              "loc": "64:15-18"
+              "loc": "65:15-18"
             }
           ],
           "providedExports": null,
@@ -2088,7 +2732,7 @@
           "index2": 30,
           "size": 6980,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -2167,7 +2811,7 @@
           "index2": 31,
           "size": 196,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -2259,7 +2903,7 @@
           "index2": 36,
           "size": 6048,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -2330,7 +2974,7 @@
           "index2": 16,
           "size": 72141,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -2384,7 +3028,7 @@
           "index2": 17,
           "size": 190,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -2453,7 +3097,7 @@
               "moduleName": "./src/App.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "50:26-31"
+              "loc": "51:26-31"
             },
             {
               "moduleId": "./src/App.js",
@@ -2462,7 +3106,7 @@
               "moduleName": "./src/App.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "50:72-77"
+              "loc": "51:72-77"
             },
             {
               "moduleId": "./src/App.js",
@@ -2471,7 +3115,106 @@
               "moduleName": "./src/App.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "62:2-7"
+              "loc": "63:2-7"
+            },
+            {
+              "moduleId": "./src/app/components/MovieCard/index.js",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+              "module": "./src/app/components/MovieCard/index.js",
+              "moduleName": "./src/app/components/MovieCard/index.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "react",
+              "loc": "10:0-26"
+            },
+            {
+              "moduleId": "./src/app/components/MovieCard/index.js",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+              "module": "./src/app/components/MovieCard/index.js",
+              "moduleName": "./src/app/components/MovieCard/index.js",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "18:22-27"
+            },
+            {
+              "moduleId": "./src/app/components/MovieCard/index.js",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+              "module": "./src/app/components/MovieCard/index.js",
+              "moduleName": "./src/app/components/MovieCard/index.js",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "20:18-23"
+            },
+            {
+              "moduleId": "./src/app/components/MovieCard/index.js",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+              "module": "./src/app/components/MovieCard/index.js",
+              "moduleName": "./src/app/components/MovieCard/index.js",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "22:18-23"
+            },
+            {
+              "moduleId": "./src/app/components/MovieCard/index.js",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+              "module": "./src/app/components/MovieCard/index.js",
+              "moduleName": "./src/app/components/MovieCard/index.js",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "25:20-25"
+            },
+            {
+              "moduleId": "./src/app/components/MovieCard/index.js",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+              "module": "./src/app/components/MovieCard/index.js",
+              "moduleName": "./src/app/components/MovieCard/index.js",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "27:18-23"
+            },
+            {
+              "moduleId": "./src/app/components/MovieCard/index.js",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+              "module": "./src/app/components/MovieCard/index.js",
+              "moduleName": "./src/app/components/MovieCard/index.js",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "29:26-31"
+            },
+            {
+              "moduleId": "./src/app/pages/Home/index.js",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+              "module": "./src/app/pages/Home/index.js",
+              "moduleName": "./src/app/pages/Home/index.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "react",
+              "loc": "10:0-26"
+            },
+            {
+              "moduleId": "./src/app/pages/Home/index.js",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+              "module": "./src/app/pages/Home/index.js",
+              "moduleName": "./src/app/pages/Home/index.js",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "14:22-27"
+            },
+            {
+              "moduleId": "./src/app/pages/Home/index.js",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+              "module": "./src/app/pages/Home/index.js",
+              "moduleName": "./src/app/pages/Home/index.js",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "14:68-73"
+            },
+            {
+              "moduleId": "./src/app/pages/Home/index.js",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+              "module": "./src/app/pages/Home/index.js",
+              "moduleName": "./src/app/pages/Home/index.js",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "14:122-127"
             },
             {
               "moduleId": "./src/index.js",
@@ -2505,7 +3248,7 @@
           "index2": 20,
           "size": 9001,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -2569,7 +3312,7 @@
           "index2": 18,
           "size": 17563,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -2633,7 +3376,7 @@
           "index2": 19,
           "size": 198,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -2692,7 +3435,7 @@
           "index2": 21,
           "size": 214,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -2751,7 +3494,7 @@
           "index2": 26,
           "size": 979,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -2816,11 +3559,11 @@
           "id": "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
           "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
           "name": "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
-          "index": 45,
+          "index": 49,
           "index2": 41,
           "size": 6827,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -2873,6 +3616,24 @@
               "type": "harmony import specifier",
               "userRequest": "!../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
               "loc": "9:13-16"
+            },
+            {
+              "moduleId": "./src/app/components/MovieCard/index.sass",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+              "module": "./src/app/components/MovieCard/index.sass",
+              "moduleName": "./src/app/components/MovieCard/index.sass",
+              "type": "harmony side effect evaluation",
+              "userRequest": "!../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+              "loc": "1:0-98"
+            },
+            {
+              "moduleId": "./src/app/components/MovieCard/index.sass",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+              "module": "./src/app/components/MovieCard/index.sass",
+              "moduleName": "./src/app/components/MovieCard/index.sass",
+              "type": "harmony import specifier",
+              "userRequest": "!../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+              "loc": "9:13-16"
             }
           ],
           "providedExports": null,
@@ -2888,7 +3649,7 @@
           "index2": 12,
           "size": 2219,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -2937,7 +3698,7 @@
           "index2": 14,
           "size": 7866,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -2981,7 +3742,7 @@
           "index2": 4,
           "size": 135,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -3035,7 +3796,7 @@
           "index2": 5,
           "size": 161,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -3084,7 +3845,7 @@
           "index2": 13,
           "size": 4454,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -3133,7 +3894,7 @@
           "index2": 27,
           "size": 85,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -3207,7 +3968,7 @@
           "index2": 28,
           "size": 80,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -3281,7 +4042,7 @@
           "index2": 24,
           "size": 573,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -3320,6 +4081,24 @@
               "type": "cjs require",
               "userRequest": "module",
               "loc": "1:0-62"
+            },
+            {
+              "moduleId": "./src/app/components/MovieCard/index.js",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+              "module": "./src/app/components/MovieCard/index.js",
+              "moduleName": "./src/app/components/MovieCard/index.js",
+              "type": "cjs require",
+              "userRequest": "module",
+              "loc": "1:0-71"
+            },
+            {
+              "moduleId": "./src/app/pages/Home/index.js",
+              "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+              "module": "./src/app/pages/Home/index.js",
+              "moduleName": "./src/app/pages/Home/index.js",
+              "type": "cjs require",
+              "userRequest": "module",
+              "loc": "1:0-71"
             }
           ],
           "providedExports": null,
@@ -3335,7 +4114,7 @@
           "index2": 0,
           "size": 497,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -3414,9 +4193,9 @@
       "identifier": "multi webpack-hot-middleware/client?reload=true ./src/index.js",
       "name": "multi webpack-hot-middleware/client?reload=true ./src/index.js",
       "index": 0,
-      "index2": 48,
+      "index2": 54,
       "size": 40,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -3451,7 +4230,7 @@
       "index2": 6,
       "size": 4263,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -3501,9 +4280,9 @@
       "id": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/App.sass",
       "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/App.sass",
       "name": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/App.sass",
-      "index": 46,
-      "index2": 44,
-      "size": 777,
+      "index": 54,
+      "index2": 50,
+      "size": 498,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -3637,25 +4416,25 @@
       ],
       "optimizationBailout": [],
       "depth": 4,
-      "source": "// Imports\nimport ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from \"../node_modules/css-loader/dist/runtime/cssWithMappingToString.js\";\nimport ___CSS_LOADER_API_IMPORT___ from \"../node_modules/css-loader/dist/runtime/api.js\";\nvar ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"body {\\n  background: pink; }\\n\\nh1 {\\n  color: purple;\\n  border: 2px solid red; }\\n\", \"\",{\"version\":3,\"sources\":[\"webpack://./src/App.sass\"],\"names\":[],\"mappings\":\"AAAA;EACI,gBAAgB,EAAA;;AAEpB;EACI,aAAa;EACb,qBAAqB,EAAA\",\"sourcesContent\":[\"body {\\n    background: pink; }\\n\\nh1 {\\n    color: purple;\\n    border: 2px solid red; }\\n\"],\"sourceRoot\":\"\"}]);\n// Exports\nexport default ___CSS_LOADER_EXPORT___;\n"
+      "source": "// Imports\nimport ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from \"../node_modules/css-loader/dist/runtime/cssWithMappingToString.js\";\nimport ___CSS_LOADER_API_IMPORT___ from \"../node_modules/css-loader/dist/runtime/api.js\";\nvar ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"\", \"\",{\"version\":3,\"sources\":[],\"names\":[],\"mappings\":\"\",\"sourceRoot\":\"\"}]);\n// Exports\nexport default ___CSS_LOADER_EXPORT___;\n"
     },
     {
-      "id": "./node_modules/css-loader/dist/runtime/api.js",
-      "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/runtime/api.js",
-      "name": "./node_modules/css-loader/dist/runtime/api.js",
-      "index": 48,
-      "index2": 43,
-      "size": 1605,
+      "id": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+      "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+      "name": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+      "index": 50,
+      "index2": 44,
+      "size": 1358,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "vendors~main"
+        "main"
       ],
-      "issuer": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/App.sass",
-      "issuerId": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/App.sass",
-      "issuerName": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/App.sass",
+      "issuer": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+      "issuerId": "./src/app/components/MovieCard/index.sass",
+      "issuerName": "./src/app/components/MovieCard/index.sass",
       "issuerPath": [
         {
           "id": 0,
@@ -3673,14 +4452,196 @@
           "name": "./src/App.js"
         },
         {
-          "id": "./src/App.sass",
-          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/App.sass",
-          "name": "./src/App.sass"
+          "id": "./src/app/pages/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/index.js",
+          "name": "./src/app/pages/index.js"
         },
         {
-          "id": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/App.sass",
-          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/App.sass",
-          "name": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/App.sass"
+          "id": "./src/app/pages/Home/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+          "name": "./src/app/pages/Home/index.js"
+        },
+        {
+          "id": "./src/app/components/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/index.js",
+          "name": "./src/app/components/index.js"
+        },
+        {
+          "id": "./src/app/components/MovieCard/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+          "name": "./src/app/components/MovieCard/index.js"
+        },
+        {
+          "id": "./src/app/components/MovieCard/index.sass",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+          "name": "./src/app/components/MovieCard/index.sass"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": "./src/app/components/MovieCard/index.sass",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+          "module": "./src/app/components/MovieCard/index.sass",
+          "moduleName": "./src/app/components/MovieCard/index.sass",
+          "type": "harmony side effect evaluation",
+          "userRequest": "!!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./index.sass",
+          "loc": "2:12-146"
+        },
+        {
+          "moduleId": "./src/app/components/MovieCard/index.sass",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+          "module": "./src/app/components/MovieCard/index.sass",
+          "moduleName": "./src/app/components/MovieCard/index.sass",
+          "type": "harmony import specifier",
+          "userRequest": "!!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./index.sass",
+          "loc": "9:17-24"
+        },
+        {
+          "moduleId": "./src/app/components/MovieCard/index.sass",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+          "module": "./src/app/components/MovieCard/index.sass",
+          "moduleName": "./src/app/components/MovieCard/index.sass",
+          "type": "harmony import specifier",
+          "userRequest": "!!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./index.sass",
+          "loc": "13:7-14"
+        },
+        {
+          "moduleId": "./src/app/components/MovieCard/index.sass",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+          "module": "./src/app/components/MovieCard/index.sass",
+          "moduleName": "./src/app/components/MovieCard/index.sass",
+          "type": "harmony import specifier",
+          "userRequest": "!!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./index.sass",
+          "loc": "45:20-27"
+        },
+        {
+          "moduleId": "./src/app/components/MovieCard/index.sass",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+          "module": "./src/app/components/MovieCard/index.sass",
+          "moduleName": "./src/app/components/MovieCard/index.sass",
+          "type": "module.hot.accept",
+          "userRequest": "!!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./index.sass",
+          "loc": "47:4-60:5"
+        },
+        {
+          "moduleId": "./src/app/components/MovieCard/index.sass",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+          "module": "./src/app/components/MovieCard/index.sass",
+          "moduleName": "./src/app/components/MovieCard/index.sass",
+          "type": "harmony accept",
+          "userRequest": "!!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./index.sass",
+          "loc": "49:6-59:7"
+        },
+        {
+          "moduleId": "./src/app/components/MovieCard/index.sass",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+          "module": "./src/app/components/MovieCard/index.sass",
+          "moduleName": "./src/app/components/MovieCard/index.sass",
+          "type": "harmony import specifier",
+          "userRequest": "!!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./index.sass",
+          "loc": "50:38-45"
+        },
+        {
+          "moduleId": "./src/app/components/MovieCard/index.sass",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+          "module": "./src/app/components/MovieCard/index.sass",
+          "moduleName": "./src/app/components/MovieCard/index.sass",
+          "type": "harmony import specifier",
+          "userRequest": "!!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./index.sass",
+          "loc": "56:26-33"
+        },
+        {
+          "moduleId": "./src/app/components/MovieCard/index.sass",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+          "module": "./src/app/components/MovieCard/index.sass",
+          "moduleName": "./src/app/components/MovieCard/index.sass",
+          "type": "harmony import specifier",
+          "userRequest": "!!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./index.sass",
+          "loc": "58:21-28"
+        },
+        {
+          "moduleId": "./src/app/components/MovieCard/index.sass",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+          "module": "./src/app/components/MovieCard/index.sass",
+          "moduleName": "./src/app/components/MovieCard/index.sass",
+          "type": "harmony import specifier",
+          "userRequest": "!!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./index.sass",
+          "loc": "68:15-22"
+        }
+      ],
+      "providedExports": [
+        "default"
+      ],
+      "optimizationBailout": [],
+      "depth": 8,
+      "source": "// Imports\nimport ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from \"../../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js\";\nimport ___CSS_LOADER_API_IMPORT___ from \"../../../../node_modules/css-loader/dist/runtime/api.js\";\nvar ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \".MovieCard {\\n  display: flex;\\n  flex-direction: column; }\\n  .MovieCard__thumbnail-container {\\n    display: flex;\\n    justify-content: center;\\n    align-items: center;\\n    border-radius: 25px;\\n    height: 350px;\\n    width: 250px;\\n    overflow: hidden; }\\n    .MovieCard__thumbnail-container img {\\n      width: 120%; }\\n\", \"\",{\"version\":3,\"sources\":[\"webpack://./src/app/components/MovieCard/index.sass\"],\"names\":[],\"mappings\":\"AAAA;EACE,aAAa;EACb,sBAAsB,EAAA;EAEtB;IACE,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IAEnB,mBAAmB;IAEnB,aAAa;IACb,YAAY;IACZ,gBAAgB,EAAA;IATjB;MAWG,WAAW,EAAA\",\"sourcesContent\":[\".MovieCard {\\n  display: flex;\\n  flex-direction: column;\\n\\n  &__thumbnail-container {\\n    display: flex;\\n    justify-content: center;\\n    align-items: center;\\n\\n    border-radius: 25px;\\n\\n    height: 350px;\\n    width: 250px;\\n    overflow: hidden;\\n    img {\\n      width: 120%; } } }\\n\"],\"sourceRoot\":\"\"}]);\n// Exports\nexport default ___CSS_LOADER_EXPORT___;\n"
+    },
+    {
+      "id": "./node_modules/css-loader/dist/runtime/api.js",
+      "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/runtime/api.js",
+      "name": "./node_modules/css-loader/dist/runtime/api.js",
+      "index": 52,
+      "index2": 43,
+      "size": 1605,
+      "cacheable": true,
+      "built": false,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "vendors~main"
+      ],
+      "issuer": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+      "issuerId": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+      "issuerName": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+      "issuerPath": [
+        {
+          "id": 0,
+          "identifier": "multi webpack-hot-middleware/client?reload=true ./src/index.js",
+          "name": "multi webpack-hot-middleware/client?reload=true ./src/index.js"
+        },
+        {
+          "id": "./src/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/index.js",
+          "name": "./src/index.js"
+        },
+        {
+          "id": "./src/App.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/App.js",
+          "name": "./src/App.js"
+        },
+        {
+          "id": "./src/app/pages/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/index.js",
+          "name": "./src/app/pages/index.js"
+        },
+        {
+          "id": "./src/app/pages/Home/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+          "name": "./src/app/pages/Home/index.js"
+        },
+        {
+          "id": "./src/app/components/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/index.js",
+          "name": "./src/app/components/index.js"
+        },
+        {
+          "id": "./src/app/components/MovieCard/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+          "name": "./src/app/components/MovieCard/index.js"
+        },
+        {
+          "id": "./src/app/components/MovieCard/index.sass",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+          "name": "./src/app/components/MovieCard/index.sass"
+        },
+        {
+          "id": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+          "name": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass"
         }
       ],
       "failed": false,
@@ -3705,6 +4666,24 @@
           "type": "harmony import specifier",
           "userRequest": "../node_modules/css-loader/dist/runtime/api.js",
           "loc": "4:30-57"
+        },
+        {
+          "moduleId": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+          "module": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+          "moduleName": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+          "type": "harmony side effect evaluation",
+          "userRequest": "../../../../node_modules/css-loader/dist/runtime/api.js",
+          "loc": "3:0-98"
+        },
+        {
+          "moduleId": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+          "module": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+          "moduleName": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+          "type": "harmony import specifier",
+          "userRequest": "../../../../node_modules/css-loader/dist/runtime/api.js",
+          "loc": "4:30-57"
         }
       ],
       "providedExports": null,
@@ -3716,19 +4695,19 @@
       "id": "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js",
       "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/runtime/cssWithMappingToString.js",
       "name": "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js",
-      "index": 47,
+      "index": 51,
       "index2": 42,
       "size": 2278,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
         "vendors~main"
       ],
-      "issuer": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/App.sass",
-      "issuerId": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/App.sass",
-      "issuerName": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/App.sass",
+      "issuer": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+      "issuerId": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+      "issuerName": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
       "issuerPath": [
         {
           "id": 0,
@@ -3746,14 +4725,34 @@
           "name": "./src/App.js"
         },
         {
-          "id": "./src/App.sass",
-          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/App.sass",
-          "name": "./src/App.sass"
+          "id": "./src/app/pages/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/index.js",
+          "name": "./src/app/pages/index.js"
         },
         {
-          "id": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/App.sass",
-          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/App.sass",
-          "name": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/App.sass"
+          "id": "./src/app/pages/Home/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+          "name": "./src/app/pages/Home/index.js"
+        },
+        {
+          "id": "./src/app/components/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/index.js",
+          "name": "./src/app/components/index.js"
+        },
+        {
+          "id": "./src/app/components/MovieCard/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+          "name": "./src/app/components/MovieCard/index.js"
+        },
+        {
+          "id": "./src/app/components/MovieCard/index.sass",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+          "name": "./src/app/components/MovieCard/index.sass"
+        },
+        {
+          "id": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+          "name": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass"
         }
       ],
       "failed": false,
@@ -3778,6 +4777,24 @@
           "type": "harmony import specifier",
           "userRequest": "../node_modules/css-loader/dist/runtime/cssWithMappingToString.js",
           "loc": "4:58-95"
+        },
+        {
+          "moduleId": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+          "module": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+          "moduleName": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+          "type": "harmony side effect evaluation",
+          "userRequest": "../../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js",
+          "loc": "2:0-127"
+        },
+        {
+          "moduleId": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+          "module": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+          "moduleName": "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/MovieCard/index.sass",
+          "type": "harmony import specifier",
+          "userRequest": "../../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js",
+          "loc": "4:58-95"
         }
       ],
       "providedExports": null,
@@ -3793,7 +4810,7 @@
       "index2": 29,
       "size": 3932,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -3862,7 +4879,7 @@
       "index2": 37,
       "size": 2743,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -3931,7 +4948,7 @@
       "index2": 9,
       "size": 7500,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -3990,7 +5007,7 @@
       "index2": 10,
       "size": 50049,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -4049,7 +5066,7 @@
       "index2": 11,
       "size": 449,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -4103,7 +5120,7 @@
       "index2": 7,
       "size": 668,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -4185,7 +5202,7 @@
       "index2": 8,
       "size": 3792,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -4244,7 +5261,7 @@
       "index2": 15,
       "size": 2108,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -4321,7 +5338,7 @@
       "index2": 33,
       "size": 3781,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -4400,7 +5417,7 @@
       "index2": 34,
       "size": 21563,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -4474,7 +5491,7 @@
       "index2": 35,
       "size": 710,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -4543,7 +5560,7 @@
       "index2": 32,
       "size": 314,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -4631,7 +5648,7 @@
       "index2": 1,
       "size": 2510,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -4685,7 +5702,7 @@
       "index2": 2,
       "size": 2544,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -4739,7 +5756,7 @@
       "index2": 3,
       "size": 127,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -4788,7 +5805,7 @@
       "index2": 22,
       "size": 894563,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -4842,7 +5859,7 @@
       "index2": 23,
       "size": 1363,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -4909,7 +5926,7 @@
       "index2": 38,
       "size": 100517,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -4973,7 +5990,7 @@
       "index2": 25,
       "size": 1103,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -5046,7 +6063,7 @@
       "index2": 39,
       "size": 1591,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -5105,7 +6122,7 @@
       "index2": 40,
       "size": 939,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -5152,7 +6169,7 @@
           "moduleName": "./src/App.js",
           "type": "harmony import specifier",
           "userRequest": "react-hot-loader/root",
-          "loc": "64:15-18"
+          "loc": "65:15-18"
         }
       ],
       "providedExports": null,
@@ -5168,7 +6185,7 @@
       "index2": 30,
       "size": 6980,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -5247,7 +6264,7 @@
       "index2": 31,
       "size": 196,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -5339,7 +6356,7 @@
       "index2": 36,
       "size": 6048,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -5410,7 +6427,7 @@
       "index2": 16,
       "size": 72141,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -5464,7 +6481,7 @@
       "index2": 17,
       "size": 190,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -5533,7 +6550,7 @@
           "moduleName": "./src/App.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "50:26-31"
+          "loc": "51:26-31"
         },
         {
           "moduleId": "./src/App.js",
@@ -5542,7 +6559,7 @@
           "moduleName": "./src/App.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "50:72-77"
+          "loc": "51:72-77"
         },
         {
           "moduleId": "./src/App.js",
@@ -5551,7 +6568,106 @@
           "moduleName": "./src/App.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "62:2-7"
+          "loc": "63:2-7"
+        },
+        {
+          "moduleId": "./src/app/components/MovieCard/index.js",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+          "module": "./src/app/components/MovieCard/index.js",
+          "moduleName": "./src/app/components/MovieCard/index.js",
+          "type": "harmony side effect evaluation",
+          "userRequest": "react",
+          "loc": "10:0-26"
+        },
+        {
+          "moduleId": "./src/app/components/MovieCard/index.js",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+          "module": "./src/app/components/MovieCard/index.js",
+          "moduleName": "./src/app/components/MovieCard/index.js",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "18:22-27"
+        },
+        {
+          "moduleId": "./src/app/components/MovieCard/index.js",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+          "module": "./src/app/components/MovieCard/index.js",
+          "moduleName": "./src/app/components/MovieCard/index.js",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "20:18-23"
+        },
+        {
+          "moduleId": "./src/app/components/MovieCard/index.js",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+          "module": "./src/app/components/MovieCard/index.js",
+          "moduleName": "./src/app/components/MovieCard/index.js",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "22:18-23"
+        },
+        {
+          "moduleId": "./src/app/components/MovieCard/index.js",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+          "module": "./src/app/components/MovieCard/index.js",
+          "moduleName": "./src/app/components/MovieCard/index.js",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "25:20-25"
+        },
+        {
+          "moduleId": "./src/app/components/MovieCard/index.js",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+          "module": "./src/app/components/MovieCard/index.js",
+          "moduleName": "./src/app/components/MovieCard/index.js",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "27:18-23"
+        },
+        {
+          "moduleId": "./src/app/components/MovieCard/index.js",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+          "module": "./src/app/components/MovieCard/index.js",
+          "moduleName": "./src/app/components/MovieCard/index.js",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "29:26-31"
+        },
+        {
+          "moduleId": "./src/app/pages/Home/index.js",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+          "module": "./src/app/pages/Home/index.js",
+          "moduleName": "./src/app/pages/Home/index.js",
+          "type": "harmony side effect evaluation",
+          "userRequest": "react",
+          "loc": "10:0-26"
+        },
+        {
+          "moduleId": "./src/app/pages/Home/index.js",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+          "module": "./src/app/pages/Home/index.js",
+          "moduleName": "./src/app/pages/Home/index.js",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "14:22-27"
+        },
+        {
+          "moduleId": "./src/app/pages/Home/index.js",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+          "module": "./src/app/pages/Home/index.js",
+          "moduleName": "./src/app/pages/Home/index.js",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "14:68-73"
+        },
+        {
+          "moduleId": "./src/app/pages/Home/index.js",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+          "module": "./src/app/pages/Home/index.js",
+          "moduleName": "./src/app/pages/Home/index.js",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "14:122-127"
         },
         {
           "moduleId": "./src/index.js",
@@ -5585,7 +6701,7 @@
       "index2": 20,
       "size": 9001,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -5649,7 +6765,7 @@
       "index2": 18,
       "size": 17563,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -5713,7 +6829,7 @@
       "index2": 19,
       "size": 198,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -5772,7 +6888,7 @@
       "index2": 21,
       "size": 214,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -5831,7 +6947,7 @@
       "index2": 26,
       "size": 979,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -5896,11 +7012,11 @@
       "id": "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
       "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
       "name": "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
-      "index": 45,
+      "index": 49,
       "index2": 41,
       "size": 6827,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -5953,6 +7069,24 @@
           "type": "harmony import specifier",
           "userRequest": "!../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
           "loc": "9:13-16"
+        },
+        {
+          "moduleId": "./src/app/components/MovieCard/index.sass",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+          "module": "./src/app/components/MovieCard/index.sass",
+          "moduleName": "./src/app/components/MovieCard/index.sass",
+          "type": "harmony side effect evaluation",
+          "userRequest": "!../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+          "loc": "1:0-98"
+        },
+        {
+          "moduleId": "./src/app/components/MovieCard/index.sass",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+          "module": "./src/app/components/MovieCard/index.sass",
+          "moduleName": "./src/app/components/MovieCard/index.sass",
+          "type": "harmony import specifier",
+          "userRequest": "!../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+          "loc": "9:13-16"
         }
       ],
       "providedExports": null,
@@ -5968,7 +7102,7 @@
       "index2": 12,
       "size": 2219,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -6017,7 +7151,7 @@
       "index2": 14,
       "size": 7866,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -6061,7 +7195,7 @@
       "index2": 4,
       "size": 135,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -6115,7 +7249,7 @@
       "index2": 5,
       "size": 161,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -6164,7 +7298,7 @@
       "index2": 13,
       "size": 4454,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -6213,7 +7347,7 @@
       "index2": 27,
       "size": 85,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -6287,7 +7421,7 @@
       "index2": 28,
       "size": 80,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -6361,7 +7495,7 @@
       "index2": 24,
       "size": 573,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -6400,6 +7534,24 @@
           "type": "cjs require",
           "userRequest": "module",
           "loc": "1:0-62"
+        },
+        {
+          "moduleId": "./src/app/components/MovieCard/index.js",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+          "module": "./src/app/components/MovieCard/index.js",
+          "moduleName": "./src/app/components/MovieCard/index.js",
+          "type": "cjs require",
+          "userRequest": "module",
+          "loc": "1:0-71"
+        },
+        {
+          "moduleId": "./src/app/pages/Home/index.js",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+          "module": "./src/app/pages/Home/index.js",
+          "moduleName": "./src/app/pages/Home/index.js",
+          "type": "cjs require",
+          "userRequest": "module",
+          "loc": "1:0-71"
         }
       ],
       "providedExports": null,
@@ -6415,7 +7567,7 @@
       "index2": 0,
       "size": 497,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -6479,10 +7631,10 @@
       "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/App.js",
       "name": "./src/App.js",
       "index": 26,
-      "index2": 46,
-      "size": 4599,
+      "index2": 52,
+      "size": 4621,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -6532,17 +7684,17 @@
       ],
       "optimizationBailout": [],
       "depth": 2,
-      "source": "function _typeof(obj) { \"@babel/helpers - typeof\"; if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\n(function () {\n  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;\n  enterModule && enterModule(module);\n})();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nfunction _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _isNativeReflectConstruct() { if (typeof Reflect === \"undefined\" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === \"function\") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nvar __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal[\"default\"].signature : function (a) {\n  return a;\n};\n\nimport { hot } from \"react-hot-loader/root\";\nimport React from \"react\";\nimport \"./App.sass\";\n\nvar App = /*#__PURE__*/function (_React$Component) {\n  _inherits(App, _React$Component);\n\n  var _super = _createSuper(App);\n\n  function App() {\n    _classCallCheck(this, App);\n\n    return _super.apply(this, arguments);\n  }\n\n  _createClass(App, [{\n    key: \"render\",\n    value: function render() {\n      return /*#__PURE__*/React.createElement(\"div\", null, /*#__PURE__*/React.createElement(\"h1\", null, \"The Movies\"));\n    }\n  }, {\n    key: \"__reactstandin__regenerateByEval\",\n    value: // @ts-ignore\n    function __reactstandin__regenerateByEval(key, code) {\n      // @ts-ignore\n      this[key] = eval(code);\n    }\n  }]);\n\n  return App;\n}(React.Component);\n\nvar _default = hot(App);\n\nexport default _default;\n;\n\n(function () {\n  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(App, \"App\", \"/home/gilsjhonny/code/mytheresa-test/src/App.js\");\n  reactHotLoader.register(_default, \"default\", \"/home/gilsjhonny/code/mytheresa-test/src/App.js\");\n})();\n\n;\n\n(function () {\n  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;\n  leaveModule && leaveModule(module);\n})();"
+      "source": "function _typeof(obj) { \"@babel/helpers - typeof\"; if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\n(function () {\n  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;\n  enterModule && enterModule(module);\n})();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nfunction _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _isNativeReflectConstruct() { if (typeof Reflect === \"undefined\" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === \"function\") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nvar __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal[\"default\"].signature : function (a) {\n  return a;\n};\n\nimport { hot } from \"react-hot-loader/root\";\nimport React from \"react\";\nimport { Home } from \"./app/pages\";\nimport \"./App.sass\";\n\nvar App = /*#__PURE__*/function (_React$Component) {\n  _inherits(App, _React$Component);\n\n  var _super = _createSuper(App);\n\n  function App() {\n    _classCallCheck(this, App);\n\n    return _super.apply(this, arguments);\n  }\n\n  _createClass(App, [{\n    key: \"render\",\n    value: function render() {\n      return /*#__PURE__*/React.createElement(\"div\", null, /*#__PURE__*/React.createElement(Home, null));\n    }\n  }, {\n    key: \"__reactstandin__regenerateByEval\",\n    value: // @ts-ignore\n    function __reactstandin__regenerateByEval(key, code) {\n      // @ts-ignore\n      this[key] = eval(code);\n    }\n  }]);\n\n  return App;\n}(React.Component);\n\nvar _default = hot(App);\n\nexport default _default;\n;\n\n(function () {\n  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(App, \"App\", \"/home/gilsjhonny/code/mytheresa-test/src/App.js\");\n  reactHotLoader.register(_default, \"default\", \"/home/gilsjhonny/code/mytheresa-test/src/App.js\");\n})();\n\n;\n\n(function () {\n  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;\n  leaveModule && leaveModule(module);\n})();"
     },
     {
       "id": "./src/App.sass",
       "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/App.sass",
       "name": "./src/App.sass",
-      "index": 44,
-      "index2": 45,
+      "index": 53,
+      "index2": 51,
       "size": 1427,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -6580,7 +7732,7 @@
           "moduleName": "./src/App.js",
           "type": "harmony side effect evaluation",
           "userRequest": "./App.sass",
-          "loc": "34:0-20"
+          "loc": "35:0-20"
         }
       ],
       "providedExports": [
@@ -6591,14 +7743,380 @@
       "source": "import api from \"!../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\";\n            import content from \"!!../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./App.sass\";\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\n\nif (module.hot) {\n  if (!content.locals || module.hot.invalidate) {\n    var isEqualLocals = function isEqualLocals(a, b, isNamedExport) {\n  if (!a && b || a && !b) {\n    return false;\n  }\n\n  var p;\n\n  for (p in a) {\n    if (isNamedExport && p === 'default') {\n      // eslint-disable-next-line no-continue\n      continue;\n    }\n\n    if (a[p] !== b[p]) {\n      return false;\n    }\n  }\n\n  for (p in b) {\n    if (isNamedExport && p === 'default') {\n      // eslint-disable-next-line no-continue\n      continue;\n    }\n\n    if (!a[p]) {\n      return false;\n    }\n  }\n\n  return true;\n};\n    var oldLocals = content.locals;\n\n    module.hot.accept(\n      \"!!../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./App.sass\",\n      function () {\n        if (!isEqualLocals(oldLocals, content.locals, undefined)) {\n                module.hot.invalidate();\n\n                return;\n              }\n\n              oldLocals = content.locals;\n\n              update(content);\n      }\n    )\n  }\n\n  module.hot.dispose(function() {\n    update();\n  });\n}\n\nexport default content.locals || {};"
     },
     {
+      "id": "./src/app/components/MovieCard/index.js",
+      "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+      "name": "./src/app/components/MovieCard/index.js",
+      "index": 47,
+      "index2": 46,
+      "size": 1867,
+      "cacheable": true,
+      "built": false,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "main"
+      ],
+      "issuer": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/index.js",
+      "issuerId": "./src/app/components/index.js",
+      "issuerName": "./src/app/components/index.js",
+      "issuerPath": [
+        {
+          "id": 0,
+          "identifier": "multi webpack-hot-middleware/client?reload=true ./src/index.js",
+          "name": "multi webpack-hot-middleware/client?reload=true ./src/index.js"
+        },
+        {
+          "id": "./src/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/index.js",
+          "name": "./src/index.js"
+        },
+        {
+          "id": "./src/App.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/App.js",
+          "name": "./src/App.js"
+        },
+        {
+          "id": "./src/app/pages/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/index.js",
+          "name": "./src/app/pages/index.js"
+        },
+        {
+          "id": "./src/app/pages/Home/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+          "name": "./src/app/pages/Home/index.js"
+        },
+        {
+          "id": "./src/app/components/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/index.js",
+          "name": "./src/app/components/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": "./src/app/components/index.js",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/index.js",
+          "module": "./src/app/components/index.js",
+          "moduleName": "./src/app/components/index.js",
+          "type": "harmony side effect evaluation",
+          "userRequest": "./MovieCard",
+          "loc": "5:0-51"
+        },
+        {
+          "moduleId": "./src/app/components/index.js",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/index.js",
+          "module": "./src/app/components/index.js",
+          "moduleName": "./src/app/components/index.js",
+          "type": "harmony export imported specifier",
+          "userRequest": "./MovieCard",
+          "loc": "5:0-51"
+        }
+      ],
+      "providedExports": [
+        "default"
+      ],
+      "optimizationBailout": [],
+      "depth": 6,
+      "source": "(function () {\n  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;\n  enterModule && enterModule(module);\n})();\n\nvar __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal[\"default\"].signature : function (a) {\n  return a;\n};\n\nimport React from \"react\";\nimport \"./index.sass\";\n\nvar MovieCard = function MovieCard(props) {\n  var _props$title = props.title,\n      title = _props$title === void 0 ? \"No Title\" : _props$title,\n      _props$date = props.date,\n      date = _props$date === void 0 ? \"Unknown\" : _props$date;\n  return /*#__PURE__*/React.createElement(\"div\", {\n    className: \"MovieCard\"\n  }, /*#__PURE__*/React.createElement(\"div\", {\n    className: \"MovieCard__thumbnail-container\"\n  }, /*#__PURE__*/React.createElement(\"img\", {\n    alt: \"movie-poster\",\n    src: \"https://www.themoviedb.org/t/p/w500/nyDU092PeGGcd6wUIzlhFoaWcyX.jpg\"\n  })), /*#__PURE__*/React.createElement(\"div\", {\n    className: \"MovieCard__info\"\n  }, /*#__PURE__*/React.createElement(\"div\", {\n    className: \"MovieCard__info__title\"\n  }, title), /*#__PURE__*/React.createElement(\"div\", {\n    className: \"MovieCard__info__date\"\n  }, date)));\n};\n\nvar _default = MovieCard;\nexport default _default;\n;\n\n(function () {\n  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(MovieCard, \"MovieCard\", \"/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js\");\n  reactHotLoader.register(_default, \"default\", \"/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js\");\n})();\n\n;\n\n(function () {\n  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;\n  leaveModule && leaveModule(module);\n})();"
+    },
+    {
+      "id": "./src/app/components/MovieCard/index.sass",
+      "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/style-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/css-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/node_modules/sass-loader/dist/cjs.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.sass",
+      "name": "./src/app/components/MovieCard/index.sass",
+      "index": 48,
+      "index2": 45,
+      "size": 1476,
+      "cacheable": true,
+      "built": false,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "main"
+      ],
+      "issuer": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+      "issuerId": "./src/app/components/MovieCard/index.js",
+      "issuerName": "./src/app/components/MovieCard/index.js",
+      "issuerPath": [
+        {
+          "id": 0,
+          "identifier": "multi webpack-hot-middleware/client?reload=true ./src/index.js",
+          "name": "multi webpack-hot-middleware/client?reload=true ./src/index.js"
+        },
+        {
+          "id": "./src/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/index.js",
+          "name": "./src/index.js"
+        },
+        {
+          "id": "./src/App.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/App.js",
+          "name": "./src/App.js"
+        },
+        {
+          "id": "./src/app/pages/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/index.js",
+          "name": "./src/app/pages/index.js"
+        },
+        {
+          "id": "./src/app/pages/Home/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+          "name": "./src/app/pages/Home/index.js"
+        },
+        {
+          "id": "./src/app/components/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/index.js",
+          "name": "./src/app/components/index.js"
+        },
+        {
+          "id": "./src/app/components/MovieCard/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+          "name": "./src/app/components/MovieCard/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": "./src/app/components/MovieCard/index.js",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/MovieCard/index.js",
+          "module": "./src/app/components/MovieCard/index.js",
+          "moduleName": "./src/app/components/MovieCard/index.js",
+          "type": "harmony side effect evaluation",
+          "userRequest": "./index.sass",
+          "loc": "11:0-22"
+        }
+      ],
+      "providedExports": [
+        "default"
+      ],
+      "optimizationBailout": [],
+      "depth": 7,
+      "source": "import api from \"!../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\";\n            import content from \"!!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./index.sass\";\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\n\nif (module.hot) {\n  if (!content.locals || module.hot.invalidate) {\n    var isEqualLocals = function isEqualLocals(a, b, isNamedExport) {\n  if (!a && b || a && !b) {\n    return false;\n  }\n\n  var p;\n\n  for (p in a) {\n    if (isNamedExport && p === 'default') {\n      // eslint-disable-next-line no-continue\n      continue;\n    }\n\n    if (a[p] !== b[p]) {\n      return false;\n    }\n  }\n\n  for (p in b) {\n    if (isNamedExport && p === 'default') {\n      // eslint-disable-next-line no-continue\n      continue;\n    }\n\n    if (!a[p]) {\n      return false;\n    }\n  }\n\n  return true;\n};\n    var oldLocals = content.locals;\n\n    module.hot.accept(\n      \"!!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./index.sass\",\n      function () {\n        if (!isEqualLocals(oldLocals, content.locals, undefined)) {\n                module.hot.invalidate();\n\n                return;\n              }\n\n              oldLocals = content.locals;\n\n              update(content);\n      }\n    )\n  }\n\n  module.hot.dispose(function() {\n    update();\n  });\n}\n\nexport default content.locals || {};"
+    },
+    {
+      "id": "./src/app/components/index.js",
+      "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/components/index.js",
+      "name": "./src/app/components/index.js",
+      "index": 46,
+      "index2": 47,
+      "size": 192,
+      "cacheable": true,
+      "built": false,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "main"
+      ],
+      "issuer": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+      "issuerId": "./src/app/pages/Home/index.js",
+      "issuerName": "./src/app/pages/Home/index.js",
+      "issuerPath": [
+        {
+          "id": 0,
+          "identifier": "multi webpack-hot-middleware/client?reload=true ./src/index.js",
+          "name": "multi webpack-hot-middleware/client?reload=true ./src/index.js"
+        },
+        {
+          "id": "./src/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/index.js",
+          "name": "./src/index.js"
+        },
+        {
+          "id": "./src/App.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/App.js",
+          "name": "./src/App.js"
+        },
+        {
+          "id": "./src/app/pages/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/index.js",
+          "name": "./src/app/pages/index.js"
+        },
+        {
+          "id": "./src/app/pages/Home/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+          "name": "./src/app/pages/Home/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": "./src/app/pages/Home/index.js",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+          "module": "./src/app/pages/Home/index.js",
+          "moduleName": "./src/app/pages/Home/index.js",
+          "type": "harmony side effect evaluation",
+          "userRequest": "../../components",
+          "loc": "11:0-45"
+        },
+        {
+          "moduleId": "./src/app/pages/Home/index.js",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+          "module": "./src/app/pages/Home/index.js",
+          "moduleName": "./src/app/pages/Home/index.js",
+          "type": "harmony import specifier",
+          "userRequest": "../../components",
+          "loc": "14:142-151"
+        }
+      ],
+      "providedExports": [
+        "MovieCard"
+      ],
+      "optimizationBailout": [],
+      "depth": 5,
+      "source": "var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal[\"default\"].signature : function (a) {\n  return a;\n};\n\nexport { default as MovieCard } from \"./MovieCard\";"
+    },
+    {
+      "id": "./src/app/pages/Home/index.js",
+      "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js",
+      "name": "./src/app/pages/Home/index.js",
+      "index": 45,
+      "index2": 48,
+      "size": 1204,
+      "cacheable": true,
+      "built": false,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "main"
+      ],
+      "issuer": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/index.js",
+      "issuerId": "./src/app/pages/index.js",
+      "issuerName": "./src/app/pages/index.js",
+      "issuerPath": [
+        {
+          "id": 0,
+          "identifier": "multi webpack-hot-middleware/client?reload=true ./src/index.js",
+          "name": "multi webpack-hot-middleware/client?reload=true ./src/index.js"
+        },
+        {
+          "id": "./src/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/index.js",
+          "name": "./src/index.js"
+        },
+        {
+          "id": "./src/App.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/App.js",
+          "name": "./src/App.js"
+        },
+        {
+          "id": "./src/app/pages/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/index.js",
+          "name": "./src/app/pages/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": "./src/app/pages/index.js",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/index.js",
+          "module": "./src/app/pages/index.js",
+          "moduleName": "./src/app/pages/index.js",
+          "type": "harmony side effect evaluation",
+          "userRequest": "./Home",
+          "loc": "5:0-41"
+        },
+        {
+          "moduleId": "./src/app/pages/index.js",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/index.js",
+          "module": "./src/app/pages/index.js",
+          "moduleName": "./src/app/pages/index.js",
+          "type": "harmony export imported specifier",
+          "userRequest": "./Home",
+          "loc": "5:0-41"
+        }
+      ],
+      "providedExports": [
+        "default"
+      ],
+      "optimizationBailout": [],
+      "depth": 4,
+      "source": "(function () {\n  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;\n  enterModule && enterModule(module);\n})();\n\nvar __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal[\"default\"].signature : function (a) {\n  return a;\n};\n\nimport React from \"react\";\nimport { MovieCard } from \"../../components\";\n\nvar Home = function Home() {\n  return /*#__PURE__*/React.createElement(\"div\", null, /*#__PURE__*/React.createElement(\"h1\", null, \"Home\"), /*#__PURE__*/React.createElement(MovieCard, null));\n};\n\nvar _default = Home;\nexport default _default;\n;\n\n(function () {\n  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(Home, \"Home\", \"/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js\");\n  reactHotLoader.register(_default, \"default\", \"/home/gilsjhonny/code/mytheresa-test/src/app/pages/Home/index.js\");\n})();\n\n;\n\n(function () {\n  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;\n  leaveModule && leaveModule(module);\n})();"
+    },
+    {
+      "id": "./src/app/pages/index.js",
+      "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/app/pages/index.js",
+      "name": "./src/app/pages/index.js",
+      "index": 44,
+      "index2": 49,
+      "size": 182,
+      "cacheable": true,
+      "built": false,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "main"
+      ],
+      "issuer": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/App.js",
+      "issuerId": "./src/App.js",
+      "issuerName": "./src/App.js",
+      "issuerPath": [
+        {
+          "id": 0,
+          "identifier": "multi webpack-hot-middleware/client?reload=true ./src/index.js",
+          "name": "multi webpack-hot-middleware/client?reload=true ./src/index.js"
+        },
+        {
+          "id": "./src/index.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/index.js",
+          "name": "./src/index.js"
+        },
+        {
+          "id": "./src/App.js",
+          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/App.js",
+          "name": "./src/App.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": "./src/App.js",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/App.js",
+          "module": "./src/App.js",
+          "moduleName": "./src/App.js",
+          "type": "harmony side effect evaluation",
+          "userRequest": "./app/pages",
+          "loc": "34:0-35"
+        },
+        {
+          "moduleId": "./src/App.js",
+          "moduleIdentifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/App.js",
+          "module": "./src/App.js",
+          "moduleName": "./src/App.js",
+          "type": "harmony import specifier",
+          "userRequest": "./app/pages",
+          "loc": "51:92-96"
+        }
+      ],
+      "providedExports": [
+        "Home"
+      ],
+      "optimizationBailout": [],
+      "depth": 3,
+      "source": "var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal[\"default\"].signature : function (a) {\n  return a;\n};\n\nexport { default as Home } from \"./Home\";"
+    },
+    {
       "id": "./src/index.js",
       "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/babel-loader/lib/index.js!/home/gilsjhonny/code/mytheresa-test/src/index.js",
       "name": "./src/index.js",
       "index": 16,
-      "index2": 47,
+      "index2": 53,
       "size": 325,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -6643,175 +8161,5 @@
       "debug": false
     }
   },
-  "children": [
-    {
-      "errors": [],
-      "warnings": [],
-      "publicPath": "/",
-      "outputPath": "/home/gilsjhonny/code/mytheresa-test/dist",
-      "assetsByChunkName": {
-        "HtmlWebpackPlugin_0": "__child-HtmlWebpackPlugin_0"
-      },
-      "assets": [
-        {
-          "name": "__child-HtmlWebpackPlugin_0",
-          "size": 4743,
-          "chunks": [
-            "HtmlWebpackPlugin_0"
-          ],
-          "chunkNames": [
-            "HtmlWebpackPlugin_0"
-          ],
-          "info": {},
-          "emitted": false
-        }
-      ],
-      "filteredAssets": 0,
-      "entrypoints": {
-        "HtmlWebpackPlugin_0": {
-          "chunks": [
-            "HtmlWebpackPlugin_0"
-          ],
-          "assets": [
-            "__child-HtmlWebpackPlugin_0"
-          ],
-          "children": {},
-          "childAssets": {}
-        }
-      },
-      "namedChunkGroups": {
-        "HtmlWebpackPlugin_0": {
-          "chunks": [
-            "HtmlWebpackPlugin_0"
-          ],
-          "assets": [
-            "__child-HtmlWebpackPlugin_0"
-          ],
-          "children": {},
-          "childAssets": {}
-        }
-      },
-      "chunks": [
-        {
-          "id": "HtmlWebpackPlugin_0",
-          "rendered": true,
-          "initial": true,
-          "entry": true,
-          "size": 663,
-          "names": [
-            "HtmlWebpackPlugin_0"
-          ],
-          "files": [
-            "__child-HtmlWebpackPlugin_0"
-          ],
-          "hash": "b3617a6d0b274a3c32c2",
-          "siblings": [],
-          "parents": [],
-          "children": [],
-          "childrenByOrder": {},
-          "modules": [
-            {
-              "id": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
-              "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/html-webpack-plugin/lib/loader.js!/home/gilsjhonny/code/mytheresa-test/src/index.html",
-              "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
-              "index": 0,
-              "index2": 0,
-              "size": 663,
-              "cacheable": true,
-              "built": true,
-              "optional": false,
-              "prefetched": false,
-              "chunks": [
-                "HtmlWebpackPlugin_0"
-              ],
-              "issuer": null,
-              "issuerId": null,
-              "issuerName": null,
-              "issuerPath": null,
-              "failed": false,
-              "errors": 0,
-              "warnings": 0,
-              "assets": [],
-              "reasons": [
-                {
-                  "moduleId": null,
-                  "moduleIdentifier": null,
-                  "module": null,
-                  "moduleName": null,
-                  "type": "single entry",
-                  "userRequest": "/home/gilsjhonny/code/mytheresa-test/node_modules/html-webpack-plugin/lib/loader.js!/home/gilsjhonny/code/mytheresa-test/src/index.html",
-                  "loc": "HtmlWebpackPlugin_0"
-                }
-              ],
-              "providedExports": null,
-              "optimizationBailout": [],
-              "depth": 0,
-              "source": "var _ = __non_webpack_require__(\"/home/gilsjhonny/code/mytheresa-test/node_modules/lodash/lodash.js\");module.exports = function (templateParams) { with(templateParams) {return (function(data) {\nvar __t, __p = '';\n__p += '<!DOCTYPE html>\\n<html>\\n  <head>\\n    <meta charset=\"utf-8\" />\\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\\n    <title>My Movies</title>\\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\\n  </head>\\n  <body>\\n    <noscript> You need to enable JavaScript to run this app. </noscript>\\n    <!-- your react app will render here -->\\n    <div id=\"root\"></div>\\n  </body>\\n</html>\\n';\nreturn __p\n})();}}"
-            }
-          ],
-          "filteredModules": 0,
-          "origins": [
-            {
-              "module": "",
-              "moduleIdentifier": "",
-              "moduleName": "",
-              "loc": "HtmlWebpackPlugin_0",
-              "request": "/home/gilsjhonny/code/mytheresa-test/node_modules/html-webpack-plugin/lib/loader.js!/home/gilsjhonny/code/mytheresa-test/src/index.html",
-              "reasons": []
-            }
-          ]
-        }
-      ],
-      "modules": [
-        {
-          "id": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
-          "identifier": "/home/gilsjhonny/code/mytheresa-test/node_modules/html-webpack-plugin/lib/loader.js!/home/gilsjhonny/code/mytheresa-test/src/index.html",
-          "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
-          "index": 0,
-          "index2": 0,
-          "size": 663,
-          "cacheable": true,
-          "built": true,
-          "optional": false,
-          "prefetched": false,
-          "chunks": [
-            "HtmlWebpackPlugin_0"
-          ],
-          "issuer": null,
-          "issuerId": null,
-          "issuerName": null,
-          "issuerPath": null,
-          "failed": false,
-          "errors": 0,
-          "warnings": 0,
-          "assets": [],
-          "reasons": [
-            {
-              "moduleId": null,
-              "moduleIdentifier": null,
-              "module": null,
-              "moduleName": null,
-              "type": "single entry",
-              "userRequest": "/home/gilsjhonny/code/mytheresa-test/node_modules/html-webpack-plugin/lib/loader.js!/home/gilsjhonny/code/mytheresa-test/src/index.html",
-              "loc": "HtmlWebpackPlugin_0"
-            }
-          ],
-          "providedExports": null,
-          "optimizationBailout": [],
-          "depth": 0,
-          "source": "var _ = __non_webpack_require__(\"/home/gilsjhonny/code/mytheresa-test/node_modules/lodash/lodash.js\");module.exports = function (templateParams) { with(templateParams) {return (function(data) {\nvar __t, __p = '';\n__p += '<!DOCTYPE html>\\n<html>\\n  <head>\\n    <meta charset=\"utf-8\" />\\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\\n    <title>My Movies</title>\\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\\n  </head>\\n  <body>\\n    <noscript> You need to enable JavaScript to run this app. </noscript>\\n    <!-- your react app will render here -->\\n    <div id=\"root\"></div>\\n  </body>\\n</html>\\n';\nreturn __p\n})();}}"
-        }
-      ],
-      "filteredModules": 0,
-      "logging": {
-        "webpack.buildChunkGraph.visitModules": {
-          "entries": [],
-          "filteredEntries": 2,
-          "debug": false
-        }
-      },
-      "children": [],
-      "name": "HtmlWebpackCompiler"
-    }
-  ]
+  "children": []
 }
