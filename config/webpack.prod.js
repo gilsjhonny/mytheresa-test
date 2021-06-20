@@ -1,4 +1,6 @@
 const path = require("path");
+const BrotliPlugin = require("brotli-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
@@ -31,13 +33,13 @@ module.exports = {
     ],
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     new OptimizeCssAssetsPlugin(), // Optimize css bundle: Remove duplicated code...
-    new MiniCssExtractPlugin({
-      filename: "[name]-[contenthash].css",
-    }),
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "./src/index.html",
     }),
+    new CompressionPlugin(), // Default algorithm compression is gzip
+    new BrotliPlugin(),
   ],
 };
