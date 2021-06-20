@@ -1,5 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
+const BundleAnalyzerPlugin =
+  require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
@@ -18,6 +20,11 @@ module.exports = {
     hot: true,
     stats: {
       colors: true,
+    },
+  },
+  optimization: {
+    splitChunks: {
+      chunks: "all",
     },
   },
   devtool: "source-map",
@@ -44,5 +51,8 @@ module.exports = {
       template: "./src/index.html",
     }),
     new webpack.HotModuleReplacementPlugin(),
+    new BundleAnalyzerPlugin({
+      generateStatsFile: true,
+    }),
   ],
 };
