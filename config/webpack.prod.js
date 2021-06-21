@@ -32,7 +32,25 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           "css-loader", // Translates CSS into CommonJS
-          "sass-loader", // Compiles Sass to CSS, using Node Sass by default
+          "resolve-url-loader",
+          {
+            loader: "sass-loader", // Compiles Sass to CSS, using Node Sass by default
+            options: {
+              implementation: require("sass"),
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "fonts/",
+            },
+          },
         ],
       },
     ],

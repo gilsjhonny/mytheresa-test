@@ -1,6 +1,7 @@
 import { hot } from "react-hot-loader/root";
 import React from "react";
 import { Home } from "./app/pages";
+import "./app/sass/main.sass";
 import "./App.sass";
 
 class App extends React.Component {

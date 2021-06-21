@@ -2,6 +2,7 @@ const path = require("path");
 const webpack = require("webpack");
 const BundleAnalyzerPlugin =
   require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
@@ -38,14 +39,29 @@ module.exports = {
       {
         test: /\.sass$/,
         use: [
-          "style-loader", // Inject CSS into the DOM.
+          MiniCssExtractPlugin.loader,
           "css-loader", // Translates CSS into CommonJS
-          "sass-loader", // Compiles Sass to CSS, using Node Sass by default
+          "resolve-url-loader",
+          {
+            loader: "sass-loader", // Compiles Sass to CSS, using Node Sass by default
+            options: {
+              implementation: require("sass"),
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: "file-loader",
+          },
         ],
       },
     ],
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "./src/index.html",
