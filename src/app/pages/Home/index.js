@@ -1,5 +1,9 @@
 import React from "react";
-import { AddToWishListButton, MovieCard } from "../../components";
+import {
+  AddToWishListButton,
+  Carousel,
+  MovieCard,
+} from "../../components";
 import "./index.sass";
 
 const Home = () => {
@@ -10,6 +14,16 @@ const Home = () => {
       <AddToWishListButton />
       <AddToWishListButton compact />
       <AddToWishListButton alreadyAdded />
+      <Carousel steps={220}>
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
+      </Carousel>
     </div>
   );
 };
