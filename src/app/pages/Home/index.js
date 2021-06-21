@@ -1,12 +1,15 @@
 import React from "react";
-import { MovieCard } from "../../components";
+import { AddToWishListButton, MovieCard } from "../../components";
 import "./index.sass";
 
 const Home = () => {
   return (
-    <div>
+    <div className="Home">
       <h1 className="Home__title">Home</h1>
       <MovieCard />
+      <AddToWishListButton />
+      <AddToWishListButton compact />
+      <AddToWishListButton alreadyAdded />
     </div>
   );
 };
