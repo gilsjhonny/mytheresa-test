@@ -33,10 +33,12 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           "css-loader", // Translates CSS into CommonJS
           "resolve-url-loader",
+          { loader: "postcss-loader", options: { sourceMap: true } },
           {
             loader: "sass-loader", // Compiles Sass to CSS, using Node Sass by default
             options: {
               implementation: require("sass"),
+              sourceMap: true,
             },
           },
         ],
