@@ -13,8 +13,8 @@ const MovieCard = (props) => {
         />
       </div>
       <div className="MovieCard__info">
-        <div className="MovieCard__info__title">{title}</div>
-        <div className="MovieCard__info__date">{date}</div>
+        <span className="MovieCard__info__title">{title}</span>
+        <span className="MovieCard__info__date">{date}</span>
       </div>
     </div>
   );
