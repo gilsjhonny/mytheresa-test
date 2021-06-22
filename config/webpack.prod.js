@@ -13,11 +13,18 @@ module.exports = {
   output: {
     filename: "[name]-bundle.js",
     path: path.resolve(__dirname, "../dist"),
-    publicPath: "",
+    publicPath: "/",
   },
   optimization: {
     splitChunks: {
       chunks: "all",
+      cacheGroups: {
+        vendor: {
+          name: "vendor",
+          chunks: "initial",
+          minChunks: 2,
+        },
+      },
     },
   },
   module: {
@@ -31,13 +38,13 @@ module.exports = {
         test: /\.sass$/,
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader", // Translates CSS into CommonJS
+          "css-loader",
           "resolve-url-loader",
           { loader: "postcss-loader", options: { sourceMap: true } },
           {
-            loader: "sass-loader", // Compiles Sass to CSS, using Node Sass by default
+            loader: "sass-loader",
             options: {
-              implementation: require("sass"),
+              implementation: require("sass"), // use dart-sass instead of node-sass
               sourceMap: true,
             },
           },
@@ -58,8 +65,14 @@ module.exports = {
     ],
   },
   plugins: [
+    new OptimizeCssAssetsPlugin({
+      assetNameRegExp: /\.css$/g,
+      cssProcessorPluginOptions: {
+        preset: ["default", { discardComments: { removeAll: true } }],
+      },
+      canPrint: true,
+    }),
     new MiniCssExtractPlugin(),
-    new OptimizeCssAssetsPlugin(), // Optimize css bundle: Remove duplicated code...
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "./src/index.html",

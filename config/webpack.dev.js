@@ -7,7 +7,10 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: ["webpack-hot-middleware/client?reload=true", "./src/index.js"],
+    main: [
+      "webpack-hot-middleware/client?reload=true",
+      "./src/index.js",
+    ],
   },
   mode: "development",
   output: {
@@ -23,11 +26,6 @@ module.exports = {
       colors: true,
     },
   },
-  optimization: {
-    splitChunks: {
-      chunks: "all",
-    },
-  },
   devtool: "source-map",
   module: {
     rules: [
@@ -40,12 +38,13 @@ module.exports = {
         test: /\.sass$/,
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader", // Translates CSS into CommonJS
+          "css-loader",
           "resolve-url-loader",
+          { loader: "postcss-loader" },
           {
-            loader: "sass-loader", // Compiles Sass to CSS, using Node Sass by default
+            loader: "sass-loader",
             options: {
-              implementation: require("sass"),
+              implementation: require("sass"), // use dart-sass instead of node-sass
             },
           },
         ],

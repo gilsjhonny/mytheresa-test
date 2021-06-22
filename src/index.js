@@ -1,5 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App.js";
+import { AppContainer } from "react-hot-loader";
+import AppRoot from "./app/AppRoot.js";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+function render(Component) {
+  ReactDOM.render(
+    <AppContainer>
+      <Component />
+    </AppContainer>,
+    document.getElementById("react-root")
+  );
+}
+render(AppRoot);
+
+if (module.hot) {
+  module.hot.accept("./app/AppRoot.js", () => {
+    const NewAppRoot = require("./app/AppRoot.js").default;
+    render(NewAppRoot);
+  });
+}
