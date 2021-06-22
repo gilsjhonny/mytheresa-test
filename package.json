@@ -23,6 +23,8 @@
     "express-static-gzip": "^2.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
     "webpack-hot-server-middleware": "^0.6.1"
   },
   "devDependencies": {

@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOMServer from "react-dom/server";
-import AppRoot from "../app/AppRoot";
+import { StaticRouter } from "react-router";
+import Routes from "../app/Routes";
 
 export default () => (req, res) => {
   res.send(`<html>
@@ -11,7 +12,9 @@ export default () => (req, res) => {
     </head>
     <body>
       <div id="react-root">${ReactDOMServer.renderToString(
-        <AppRoot />
+        <StaticRouter location={req.url} context={{}}>
+          <Routes />
+        </StaticRouter>
       )}</div>
       <script src="vendors~main-bundle.js"></script>
       <script src="main-bundle.js"></script>

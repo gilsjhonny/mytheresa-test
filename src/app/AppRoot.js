@@ -1,16 +1,17 @@
 import React from "react";
-import { Home } from "./pages";
-import "./sass/main.sass";
+import { BrowserRouter as Router } from "react-router-dom";
 import "./AppRoot.sass";
+import Routes from "./Routes";
+import "./sass/main.sass";
 
 class AppRoot extends React.Component {
   state = {};
 
   render() {
     return (
-      <div>
-        <Home />
-      </div>
+      <Router>
+        <Routes />
+      </Router>
     );
   }
 }
