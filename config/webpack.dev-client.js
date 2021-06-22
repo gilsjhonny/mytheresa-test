@@ -1,18 +1,16 @@
 const path = require("path");
 const webpack = require("webpack");
-const BundleAnalyzerPlugin =
-  require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  name: "client",
+  mode: "development",
   entry: {
     main: [
       "webpack-hot-middleware/client?reload=true",
       "./src/index.js",
     ],
   },
-  mode: "development",
   output: {
     filename: "[name]-bundle.js",
     path: path.resolve(__dirname, "../dist"),
@@ -61,13 +59,6 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin(),
-    // new HtmlWebpackPlugin({
-    //   filename: "index.html",
-    //   template: "./src/index.html",
-    // }),
     new webpack.HotModuleReplacementPlugin(),
-    new BundleAnalyzerPlugin({
-      generateStatsFile: true,
-    }),
   ],
 };

@@ -1,18 +1,32 @@
 const path = require("path");
+const BrotliPlugin = require("brotli-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const nodeExternals = require("webpack-node-externals");
+const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
+  name: "client",
   entry: {
-    server: ["./src/server/main.js"],
+    main: ["./src/index.js"],
   },
   mode: "production",
   output: {
     filename: "[name]-bundle.js",
-    path: path.resolve(__dirname, "../build"),
+    path: path.resolve(__dirname, "../dist"),
+    publicPath: "/",
   },
-  target: "node",
-  externals: nodeExternals(),
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+      cacheGroups: {
+        vendor: {
+          name: "vendor",
+          chunks: "initial",
+          minChunks: 2,
+        },
+      },
+    },
+  },
   module: {
     rules: [
       {
@@ -51,8 +65,15 @@ module.exports = {
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: "main.css",
+    new OptimizeCssAssetsPlugin({
+      assetNameRegExp: /\.css$/g,
+      cssProcessorPluginOptions: {
+        preset: ["default", { discardComments: { removeAll: true } }],
+      },
+      canPrint: true,
     }),
+    new MiniCssExtractPlugin(),
+    new CompressionPlugin(), // Default algorithm compression is gzip
+    new BrotliPlugin(),
   ],
 };

@@ -4,12 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config=config/webpack.dev.js",
-    "build": "NODE_ENV=production webpack --config=config/webpack.prod.js",
-    "build:dev": "webpack --config=config/webpack.dev.js",
-    "build:server": "NODE_ENV=production webpack --config=config/webpack.server.js --watch",
-    "dev": "nodemon --inspect --watch config --watch build build/server-bundle.js",
-    "prod": "NODE_ENV=production node build/server-bundle.js"
+    "prod": "NODE_ENV=production node src/server/main.js",
+    "dev": "nodemon --watch src/server --watch config --inspect src/server/main.js"
   },
   "keywords": [],
   "author": "",
@@ -26,7 +22,8 @@
     "express": "^4.17.1",
     "express-static-gzip": "^2.1.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "webpack-hot-server-middleware": "^0.6.1"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",

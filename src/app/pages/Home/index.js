@@ -4,7 +4,7 @@ import {
   Carousel,
   MovieCard,
 } from "../../components";
-import "./index.sass";
+// import "./index.sass";
 
 const Home = () => {
   return (

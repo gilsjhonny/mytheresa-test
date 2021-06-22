@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
-import "./index.sass";
+// import "./index.sass";
 
 const Button = (props) => {
   const {

@@ -1,55 +1,59 @@
-import React from "react";
-import ReactDOMServer from "react-dom/server";
-import config from "../../config/webpack.dev.js";
 import express from "express";
 import expressStaticGzip from "express-static-gzip";
-import path from "path";
 import webpack from "webpack";
 import webpackDevMiddleware from "webpack-dev-middleware";
 import webpackHotMiddleware from "webpack-hot-middleware";
-import AppRoot from "../app/AppRoot";
+import webpackHotServerMiddleware from "webpack-hot-server-middleware";
+
+// Webpack Configs
+import configDevClient from "../../config/webpack.dev-client";
+import configDevServer from "../../config/webpack.dev-server";
+import configProdClient from "../../config/webpack.prod-client";
+import configProdServer from "../../config/webpack.prod-server";
 
 const server = express();
 
 const isProd = process.env.NODE_ENV === "production";
+const isDev = !isProd;
 
-if (!isProd) {
+if (isDev) {
   // WEBPACK MIDDLEWARES
   // --------------------------------------------
-  const compiler = webpack(config);
+  const compiler = webpack([configDevClient, configDevServer]);
+
+  const clientCompiler = compiler.compilers[0];
 
   // Allows serving of the files emitted from webpack
-  server.use(webpackDevMiddleware(compiler, config.devServer));
+  server.use(
+    webpackDevMiddleware(compiler, configDevClient.devServer)
+  );
 
-  // Allows hot reloading into an existing server
-  server.use(webpackHotMiddleware(compiler));
+  server.use(webpackHotServerMiddleware(compiler));
+
+  server.use(
+    webpackHotMiddleware(clientCompiler, configDevClient.devServer)
+  );
+
+  console.log("Middleware enabled");
   // --------------------------------------------
+} else {
+  webpack([configProdClient, configProdServer]).run((err, stats) => {
+    const render =
+      require("../../build/prod-server-bundle.js").default;
+
+    console.log("Running webpack in production...");
+
+    // Use brotli compression for assets with fallback to gzip
+    server.use(
+      expressStaticGzip("dist", {
+        enableBrotli: true,
+        orderPreference: ["br", "gz"],
+      })
+    );
+
+    server.use(render());
+  });
 }
-
-// Use brotli compression for assets with fallback to gzip
-server.use(
-  expressStaticGzip("dist", {
-    enableBrotli: true,
-    orderPreference: ["br", "gz"],
-  })
-);
-
-server.get("*", (req, res) => {
-  res.send(`
-  <html>
-    <head>
-      <link href="server.css" rel="stylesheet" />
-    </head>
-    <body>
-      <div id="react-root">
-        ${ReactDOMServer.renderToString(<AppRoot />)}
-      </div>
-      <script src="vendors-bundle.js"></script>
-      <script src="main-bundle.js"></script>
-    </body>
-  </html>  
-  `);
-});
 
 server.listen(process.env.PORT || 8080, () => {
   console.log("Server is listening");
