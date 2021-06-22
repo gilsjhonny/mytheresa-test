@@ -13,6 +13,7 @@ module.exports = {
     path: path.resolve(__dirname, "../build"),
     libraryTarget: "commonjs2",
   },
+  devtool: "source-map",
   module: {
     rules: [
       {
@@ -24,7 +25,9 @@ module.exports = {
         test: /\.sass$/,
         use: [
           "css-loader",
-          "resolve-url-loader",
+          {
+            loader: "resolve-url-loader",
+          },
           { loader: "postcss-loader" },
           {
             loader: "sass-loader",

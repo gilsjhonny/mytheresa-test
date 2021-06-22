@@ -7,6 +7,7 @@ module.exports = {
   mode: "development",
   entry: {
     main: [
+      "react-hot-loader/patch",
       "webpack-hot-middleware/client?reload=true",
       "./src/index.js",
     ],

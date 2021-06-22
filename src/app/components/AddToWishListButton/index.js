@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { BaseButton } from "../_Base";
 import classNames from "classnames";
-// import "./index.sass";
+import "./index.sass";
 
 const AddToWishlistButton = (props) => {
   const { alreadyAdded, compact, onClick } = props;

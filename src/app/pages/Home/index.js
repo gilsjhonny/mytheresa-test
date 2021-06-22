@@ -4,12 +4,11 @@ import {
   Carousel,
   MovieCard,
 } from "../../components";
-// import "./index.sass";
+import "./index.sass";
 
 const Home = () => {
   return (
     <div className="Home">
-      <h1 className="Home__title">Home</h1>
       <MovieCard />
       <AddToWishListButton />
       <AddToWishListButton compact />

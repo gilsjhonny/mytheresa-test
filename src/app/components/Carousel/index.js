@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ChevronIcon from "../Icons/Chevron";
-// import "./index.sass";
+import "./index.sass";
 
 class Carousel extends React.Component {
   constructor(props) {
@@ -30,8 +30,6 @@ class Carousel extends React.Component {
 
     const moveToRight = () =>
       this.setState((prev) => {
-        debugger;
-
         return {
           offset: prev.offset - steps,
         };
