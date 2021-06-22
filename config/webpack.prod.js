@@ -73,10 +73,10 @@ module.exports = {
       canPrint: true,
     }),
     new MiniCssExtractPlugin(),
-    new HtmlWebpackPlugin({
-      filename: "index.html",
-      template: "./src/index.html",
-    }),
+    // new HtmlWebpackPlugin({
+    //   filename: "index.html",
+    //   template: "./src/index.html",
+    // }),
     new CompressionPlugin(), // Default algorithm compression is gzip
     new BrotliPlugin(),
   ],

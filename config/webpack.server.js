@@ -1,32 +1,18 @@
 const path = require("path");
-const webpack = require("webpack");
-const BundleAnalyzerPlugin =
-  require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const nodeExternals = require("webpack-node-externals");
 
 module.exports = {
   entry: {
-    main: [
-      "webpack-hot-middleware/client?reload=true",
-      "./src/index.js",
-    ],
+    server: ["./src/server/main.js"],
   },
-  mode: "development",
+  mode: "production",
   output: {
     filename: "[name]-bundle.js",
-    path: path.resolve(__dirname, "../dist"),
-    publicPath: "/",
+    path: path.resolve(__dirname, "../build"),
   },
-  devServer: {
-    contentBase: "dist",
-    overlay: true,
-    hot: true,
-    stats: {
-      colors: true,
-    },
-  },
-  devtool: "source-map",
+  target: "node",
+  externals: nodeExternals(),
   module: {
     rules: [
       {
@@ -40,11 +26,12 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           "css-loader",
           "resolve-url-loader",
-          { loader: "postcss-loader" },
+          { loader: "postcss-loader", options: { sourceMap: true } },
           {
             loader: "sass-loader",
             options: {
               implementation: require("sass"), // use dart-sass instead of node-sass
+              sourceMap: true,
             },
           },
         ],
@@ -54,20 +41,18 @@ module.exports = {
         use: [
           {
             loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "fonts/",
+            },
           },
         ],
       },
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin(),
-    // new HtmlWebpackPlugin({
-    //   filename: "index.html",
-    //   template: "./src/index.html",
-    // }),
-    new webpack.HotModuleReplacementPlugin(),
-    new BundleAnalyzerPlugin({
-      generateStatsFile: true,
+    new MiniCssExtractPlugin({
+      filename: "main.css",
     }),
   ],
 };
