@@ -1,14 +1,16 @@
 const path = require("path");
-const nodeExternals = require("webpack-node-externals");
+const externals = require("../config/node-externals");
+const webpack = require("webpack");
 
 module.exports = {
   name: "server",
   target: "node",
-  externals: nodeExternals(),
+  externals,
   entry: "./src/server/render.js",
   mode: "production",
   output: {
     filename: "prod-server-bundle.js",
+    chunkFilename: "[name].js",
     path: path.resolve(__dirname, "../build"),
     libraryTarget: "commonjs2",
   },
@@ -48,5 +50,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [],
+  plugins: [
+    new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 }),
+  ],
 };

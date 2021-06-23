@@ -1,6 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
 
 module.exports = {
   name: "client",
@@ -14,6 +14,7 @@ module.exports = {
   },
   output: {
     filename: "[name]-bundle.js",
+    chunkFilename: "[name].js",
     path: path.resolve(__dirname, "../dist"),
     publicPath: "/",
   },
@@ -26,6 +27,20 @@ module.exports = {
     },
   },
   devtool: "source-map",
+  optimization: {
+    runtimeChunk: {
+      name: "bootstrap",
+    },
+    splitChunks: {
+      chunks: "initial",
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendor",
+        },
+      },
+    },
+  },
   module: {
     rules: [
       {
@@ -36,7 +51,7 @@ module.exports = {
       {
         test: /\.sass$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          ExtractCssChunks.loader,
           "css-loader",
           "resolve-url-loader",
           { loader: "postcss-loader" },
@@ -59,7 +74,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin(),
+    new ExtractCssChunks({ hot: true }),
     new webpack.HotModuleReplacementPlugin(),
   ],
 };

@@ -1,7 +1,7 @@
 const path = require("path");
 const BrotliPlugin = require("brotli-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
@@ -12,17 +12,20 @@ module.exports = {
   mode: "production",
   output: {
     filename: "[name]-bundle.js",
+    chunkFilename: "[name].js",
     path: path.resolve(__dirname, "../dist"),
     publicPath: "/",
   },
   optimization: {
+    runtimeChunk: {
+      name: "bootstrap",
+    },
     splitChunks: {
-      chunks: "all",
+      chunks: "initial",
       cacheGroups: {
-        vendor: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
           name: "vendor",
-          chunks: "initial",
-          minChunks: 2,
         },
       },
     },
@@ -37,7 +40,7 @@ module.exports = {
       {
         test: /\.sass$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          ExtractCssChunks.loader,
           "css-loader",
           "resolve-url-loader",
           { loader: "postcss-loader", options: { sourceMap: true } },
@@ -72,7 +75,7 @@ module.exports = {
       },
       canPrint: true,
     }),
-    new MiniCssExtractPlugin(),
+    new ExtractCssChunks(),
     new CompressionPlugin(), // Default algorithm compression is gzip
     new BrotliPlugin(),
   ],

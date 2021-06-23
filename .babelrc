@@ -1,4 +1,8 @@
 {
   "presets": ["@babel/env", "@babel/react"],
-  "plugins": ["react-hot-loader/babel"]
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import",
+    "universal-import",
+    "react-hot-loader/babel"
+  ]
 }

@@ -38,6 +38,13 @@ if (isDev) {
   // --------------------------------------------
 } else {
   webpack([configProdClient, configProdServer]).run((err, stats) => {
+    const clientStats = stats.toJson().children[0];
+    console.log(
+      stats.toString({
+        colors: true,
+      })
+    );
+
     const render =
       require("../../build/prod-server-bundle.js").default;
 
@@ -51,7 +58,7 @@ if (isDev) {
       })
     );
 
-    server.use(render());
+    server.use(render({ clientStats }));
   });
 }
 
