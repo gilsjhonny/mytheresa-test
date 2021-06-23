@@ -1,1 +1,0 @@
-exports.ids=[3],exports.modules={3:function(t,e,n){"use strict";n.r(e);var r=n(0),s=n.n(r);e.default=function(){return s.a.createElement("div",null,"Wishlist")}}};

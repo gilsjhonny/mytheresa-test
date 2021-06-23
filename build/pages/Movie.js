@@ -1,1 +1,0 @@
-exports.ids=[2],exports.modules={2:function(e,t,n){"use strict";n.r(t);var r=n(0),u=n.n(r);t.default=function(){return u.a.createElement("div",null,"Movie")}}};

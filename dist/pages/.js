@@ -1,4 +1,4 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[0,1,2,3,6,7],{12:function(e,t,n){"use strict";n.r(t);var r=n(7);n.d(t,"Home",(function(){return r.default}));var o=n(8);n.d(t,"Movie",(function(){return o.default}));var a=n(9);n.d(t,"Wishlist",(function(){return a.default}))},29:function(e,t,n){},30:function(e,t,n){},53:function(e,t,n){var r;
+(window.webpackJsonp=window.webpackJsonp||[]).push([[0,1,2,3,5,6],{12:function(e,t,n){"use strict";n.r(t);var r=n(7);n.d(t,"Home",(function(){return r.default}));var o=n(8);n.d(t,"Movie",(function(){return o.default}));var a=n(9);n.d(t,"Wishlist",(function(){return a.default}))},29:function(e,t,n){},30:function(e,t,n){},53:function(e,t,n){var r;
 /*!
   Copyright (c) 2018 Jed Watson.
   Licensed under the MIT License (MIT), see

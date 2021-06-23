@@ -28,9 +28,6 @@ module.exports = {
   },
   devtool: "source-map",
   optimization: {
-    runtimeChunk: {
-      name: "bootstrap",
-    },
     splitChunks: {
       chunks: "initial",
       cacheGroups: {
@@ -46,7 +43,11 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: [{ loader: "babel-loader" }],
+        use: [
+          {
+            loader: "babel-loader",
+          },
+        ],
       },
       {
         test: /\.sass$/,

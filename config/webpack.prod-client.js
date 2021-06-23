@@ -17,9 +17,6 @@ module.exports = {
     publicPath: "/",
   },
   optimization: {
-    runtimeChunk: {
-      name: "bootstrap",
-    },
     splitChunks: {
       chunks: "initial",
       cacheGroups: {

@@ -3,8 +3,9 @@ import { Link, Route } from "react-router-dom";
 import { Switch } from "react-router";
 import universal from "react-universal-component";
 
-const UniversalComponent = universal((props) =>
-  import(`./pages/${props.page}`)
+const UniversalComponent = universal(
+  (props) => import(`./pages/${props.page}`),
+  { ignoreBabelRename: true }
 );
 
 export default () => (

@@ -8,6 +8,8 @@ import flushChunks from "webpack-flush-chunks";
 
 export default ({ clientStats }) =>
   (req, res) => {
+    if (req.url === "/__webpack_hmr") return;
+
     const app = renderToString(
       <StaticRouter location={req.url} context={{}}>
         <Routes />
