@@ -2,12 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
 import AppRoot from "./app/AppRoot.js";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 function render(Component) {
   ReactDOM.hydrate(
-    <AppContainer>
-      <Component />
-    </AppContainer>,
+    <Provider store={store}>
+      <AppContainer>
+        <Component />
+      </AppContainer>
+    </Provider>,
     document.getElementById("react-root")
   );
 }
