@@ -1,14 +1,14 @@
-export default {
+export default Object.freeze({
   HOME: {
     name: "Home",
-    route: "/",
+    path: "/",
   },
   MOVIE: {
     name: "Movie",
-    route: "/movie/:id",
+    path: "/movie/:id",
   },
   WISHLIST: {
     name: "Wishlist",
-    route: "/wishlist",
+    path: "/wishlist",
   },
-};
+});
