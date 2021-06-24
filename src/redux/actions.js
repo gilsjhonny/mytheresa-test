@@ -15,7 +15,6 @@ export const fetchMoviesByGenre =
 
     const fetchByGenre = async (url) => {
       try {
-        debugger;
         const response = await fetch(url);
         const json = await response.json();
 

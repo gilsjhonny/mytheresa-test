@@ -15,8 +15,8 @@ const UniversalComponent = universal(
 export default () => (
   <div>
     <nav>
-      <Link to={HOME.name}>{HOME.route}</Link>
-      <Link to={WISHLIST.name}>{WISHLIST.route}]</Link>
+      <Link to={HOME.route}>{HOME.name}</Link>
+      <Link to={WISHLIST.route}>{WISHLIST.name}</Link>
     </nav>
     <Switch>
       <Route exact path={HOME.route}>
