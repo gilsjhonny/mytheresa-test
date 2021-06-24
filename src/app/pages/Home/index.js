@@ -1,33 +1,44 @@
 import React from "react";
 import { connect } from "react-redux";
-import { fetchMovies } from "../../../redux/actions";
-import {
-  AddToWishListButton,
-  Carousel,
-  MovieCard,
-} from "../../components";
+import { Link } from "react-router-dom";
+import { fetchMoviesByGenre } from "../../../redux/actions";
+import { Carousel, MovieCard } from "../../components";
 import "./index.sass";
 
 class Home extends React.Component {
   componentDidMount() {
-    this.props.dispatch(fetchMovies("horror"));
+    this.props.dispatch(fetchMoviesByGenre([16, 10749, 878])); // Map ids with Genres
   }
 
   render() {
-    console.log(this.props);
+    const { topMoviesByGenres } = this.props;
+
+    const getCarousel = (movies) => (
+      <Carousel steps={220}>
+        {movies.map((movie) => (
+          <Link to={`/movie/${movie.id}`}>
+            <MovieCard
+              id={movie.id}
+              key={movie.id}
+              title={movie.title}
+              release_date={movie.release_date}
+              image_src={movie.image_src}
+            />
+          </Link>
+        ))}
+      </Carousel>
+    );
+
+    if (!topMoviesByGenres) return null;
+
     return (
       <div className="Home">
-        {!!this.props.movies && !!this.props.movies.length && (
-          <Carousel steps={220}>
-            {this.props.movies.map((movie) => (
-              <MovieCard
-                title={movie.title}
-                release_date={movie.release_date}
-                image_src={movie.image_src}
-              />
-            ))}
-          </Carousel>
-        )}
+        {topMoviesByGenres["animation"] &&
+          getCarousel(topMoviesByGenres["animation"])}
+        {topMoviesByGenres["documentaries"] &&
+          getCarousel(topMoviesByGenres["documentaries"])}
+        {topMoviesByGenres["fiction"] &&
+          getCarousel(topMoviesByGenres["fiction"])}
       </div>
     );
   }
@@ -35,6 +46,6 @@ class Home extends React.Component {
 
 export default connect((state) => {
   return {
-    movies: state.movies,
+    topMoviesByGenres: state.topMoviesByGenres,
   };
 })(Home);

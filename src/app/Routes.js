@@ -2,7 +2,11 @@ import React from "react";
 import { Link, Route } from "react-router-dom";
 import { Switch } from "react-router";
 import universal from "react-universal-component";
+import { routes } from "./constants";
 
+const { HOME, MOVIE, WISHLIST } = routes;
+
+// Import Pages Dynamically
 const UniversalComponent = universal(
   (props) => import(`./pages/${props.page}`),
   { ignoreBabelRename: true }
@@ -11,22 +15,23 @@ const UniversalComponent = universal(
 export default () => (
   <div>
     <nav>
-      <Link to="/home">Home</Link>
-      <Link to="/movie">Movie</Link>
-      <Link to="/wishlist">Wishlist</Link>
+      <Link to={HOME.name}>{HOME.route}</Link>
+      <Link to={WISHLIST.name}>{WISHLIST.route}]</Link>
     </nav>
     <Switch>
-      <Route exact path="/">
-        <UniversalComponent page="Home" />
+      <Route exact path={HOME.route}>
+        <UniversalComponent page={HOME.name} />
       </Route>
-      <Route exact path="/home">
-        <UniversalComponent page="Home" />
-      </Route>
-      <Route path="/movie">
-        <UniversalComponent page="Movie" />
-      </Route>
-      <Route path="/wishlist">
-        <UniversalComponent page="Wishlist" />
+      <Route
+        path={MOVIE.route}
+        render={({ match }) => {
+          return (
+            <UniversalComponent match={match} page={MOVIE.name} />
+          );
+        }}
+      />
+      <Route path={WISHLIST.route}>
+        <UniversalComponent page={WISHLIST.name} />
       </Route>
     </Switch>
   </div>

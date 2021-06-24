@@ -1,9 +1,9 @@
-export const fetchMovies = (state = {}, action) => {
+export const fetchMoviesByGenre = (state = {}, action) => {
   switch (action.type) {
     case "FETCH_SUCCESS":
       return {
         ...state,
-        movies: action.payload,
+        topMoviesByGenres: action.payload,
       };
     case "FETCH_ERROR":
       return {

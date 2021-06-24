@@ -1,5 +1,5 @@
 import { applyMiddleware, compose, createStore } from "redux";
-import { fetchMovies } from "./reducers";
+import { fetchMoviesByGenre } from "./reducers";
 import thunk from "redux-thunk";
 
 const composeEnhancers =
@@ -10,4 +10,4 @@ const composeEnhancers =
 
 const enhancer = composeEnhancers(applyMiddleware(thunk));
 
-export default createStore(fetchMovies, enhancer);
+export default createStore(fetchMoviesByGenre, enhancer);
