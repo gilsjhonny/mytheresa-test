@@ -1,5 +1,9 @@
 import React from "react";
-import { AddToWishListButton, MovieCard } from "../../components";
+import {
+  AddToWishListButton,
+  MovieThumbnail,
+  PageContainer,
+} from "../../components";
 import "./index.sass";
 
 class Movie extends React.Component {
@@ -19,6 +23,7 @@ class Movie extends React.Component {
       this.setState({
         movieDetails: {
           id: movie.id,
+          backdrop_path: `https://image.tmdb.org/t/p/original${movie.backdrop_path}`,
           overview: movie.overview,
           poster_src: `https://image.tmdb.org/t/p/w500${movie.poster_path}`,
           genres: movie.genres,
@@ -33,17 +38,39 @@ class Movie extends React.Component {
   render() {
     const { movieDetails } = this.state;
 
+    if (!movieDetails) return null;
+
     return (
-      <div>
-        {!!movieDetails && (
-          <MovieCard
-            title={movieDetails.title}
-            release_date={movieDetails.release_date}
-            image_src={movieDetails.poster_src}
-          />
-        )}
-        <AddToWishListButton />
-        {movieDetails && <p>{movieDetails.overview}</p>}
+      <div className="Movie">
+        <div
+          className="Movie__backdrop"
+          style={{
+            backgroundImage: `url('${movieDetails.backdrop_path}')`,
+          }}
+        />
+        <PageContainer>
+          <div className="Movie__details">
+            <div className="Movie__details__left">
+              <MovieThumbnail
+                imgSrc={movieDetails.poster_src}
+                height={500}
+                width={320}
+              />
+              <AddToWishListButton />
+            </div>
+            <div className="Movie__details__right">
+              <h1>{movieDetails.title}</h1>
+              <p>{movieDetails.release_date}</p>
+              <div>
+                {movieDetails.genres
+                  .map((genre) => genre.name)
+                  .join(", ")}
+              </div>
+              <h2>Overview</h2>
+              {movieDetails && <p>{movieDetails.overview}</p>}
+            </div>
+          </div>
+        </PageContainer>
       </div>
     );
   }

@@ -1,0 +1,23 @@
+.MovieThumbnail
+  display: flex
+  justify-content: center
+  align-items: center
+
+  background-color: #000
+  border-radius: 25px
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,rgba(17, 17, 26, 0.05) 0px 8px 32px
+  margin-bottom: 12px
+  overflow: hidden
+
+  transition: box-shadow 0.1s ease-in, transform 0.1s ease-in
+
+  img
+    height: 110%
+    transition: transform 0.1s ease-out
+    -webkit-backface-visibility: hidden
+
+  &:hover
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px
+    transform: scale(1.03)
+    img
+      transform: scale(1.02)
