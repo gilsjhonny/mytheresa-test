@@ -4,13 +4,20 @@ import { StaticRouter } from "react-router";
 import Routes from "../app/Routes";
 import { Provider } from "react-redux";
 import store from "../redux/store";
-
-import { flushChunkNames } from "react-universal-component/server";
+import {
+  clearChunks,
+  flushChunkNames,
+} from "react-universal-component/server";
 import flushChunks from "webpack-flush-chunks";
 
 export default ({ clientStats }) =>
   (req, res) => {
     if (req.url === "/__webpack_hmr") return;
+
+    clearChunks();
+    const { cssHash, js, styles } = flushChunks(clientStats, {
+      chunkNames: flushChunkNames(),
+    });
 
     const app = renderToString(
       <Provider store={store}>
@@ -18,13 +25,6 @@ export default ({ clientStats }) =>
           <Routes />
         </StaticRouter>
       </Provider>
-    );
-
-    const { cssHash, js, styles, ...rest } = flushChunks(
-      clientStats,
-      {
-        chunkNames: flushChunkNames(),
-      }
     );
 
     res.send(`<html>

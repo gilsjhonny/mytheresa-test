@@ -50,6 +50,9 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    extensions: [".js", ".sass"],
+  },
   plugins: [
     new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 }),
   ],
