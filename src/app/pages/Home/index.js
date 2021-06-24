@@ -1,17 +1,22 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { fetchMoviesByGenre } from "../../../redux/actions";
-import { Carousel, MovieCard } from "../../components";
+import { fetchMovies } from "../../../redux/modules/home";
+import {
+  Carousel,
+  Divider,
+  MovieCard,
+  PageContainer,
+} from "../../components";
 import "./index.sass";
 
 class Home extends React.Component {
   componentDidMount() {
-    this.props.dispatch(fetchMoviesByGenre([16, 10749, 878])); // Map ids with Genres
+    this.props.dispatch(fetchMovies());
   }
 
   render() {
-    const { topMoviesByGenres } = this.props;
+    const { movies } = this.props;
 
     const getCarousel = (movies) => (
       <Carousel steps={220}>
@@ -29,23 +34,22 @@ class Home extends React.Component {
       </Carousel>
     );
 
-    if (!topMoviesByGenres) return null;
+    if (!movies) return null;
 
     return (
       <div className="Home">
-        {topMoviesByGenres["animation"] &&
-          getCarousel(topMoviesByGenres["animation"])}
-        {topMoviesByGenres["documentaries"] &&
-          getCarousel(topMoviesByGenres["documentaries"])}
-        {topMoviesByGenres["fiction"] &&
-          getCarousel(topMoviesByGenres["fiction"])}
+        <PageContainer>
+          {movies.nowPlaying && getCarousel(movies.nowPlaying)}
+          <Divider />
+          {movies.upcoming && getCarousel(movies.upcoming)}
+          <Divider />
+          {movies.topRated && getCarousel(movies.topRated)}
+        </PageContainer>
       </div>
     );
   }
 }
 
-export default connect((state) => {
-  return {
-    topMoviesByGenres: state.topMoviesByGenres,
-  };
-})(Home);
+export default connect((state) => ({
+  movies: state.home.movies,
+}))(Home);

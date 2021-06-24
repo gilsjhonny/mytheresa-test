@@ -1,4 +1,9 @@
 import React from "react";
+import { connect } from "react-redux";
+import {
+  addToWihslist,
+  removeFromWishlist,
+} from "../../../redux/modules/wishlist";
 import {
   AddToWishListButton,
   MovieThumbnail,
@@ -35,7 +40,19 @@ class Movie extends React.Component {
     } catch (error) {}
   }
 
+  handleAddToWishlist = () => {
+    const { addToWishlist, isAddedToWishlist, removeFromWishlist } =
+      this.props;
+
+    if (isAddedToWishlist) {
+      removeFromWishlist(this.state.movieDetails.id);
+    } else {
+      addToWishlist(this.state.movieDetails);
+    }
+  };
+
   render() {
+    const { isAddedToWishlist } = this.props;
     const { movieDetails } = this.state;
 
     if (!movieDetails) return null;
@@ -56,7 +73,10 @@ class Movie extends React.Component {
                 height={500}
                 width={320}
               />
-              <AddToWishListButton />
+              <AddToWishListButton
+                alreadyAdded={isAddedToWishlist}
+                onClick={this.handleAddToWishlist}
+              />
             </div>
             <div className="Movie__details__right">
               <h1>{movieDetails.title}</h1>
@@ -76,4 +96,18 @@ class Movie extends React.Component {
   }
 }
 
-export default Movie;
+export default connect(
+  (state, ownProps) => {
+    return {
+      isAddedToWishlist:
+        ownProps.match &&
+        !!state.wishlist.movies[ownProps.match.params.id],
+    };
+  },
+  (dispatch) => ({
+    addToWishlist: (movieDetails) =>
+      dispatch(addToWihslist(movieDetails)),
+    removeFromWishlist: (movieId) =>
+      dispatch(removeFromWishlist(movieId)),
+  })
+)(Movie);

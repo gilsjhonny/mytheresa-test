@@ -1,5 +1,11 @@
-import { applyMiddleware, compose, createStore } from "redux";
-import { fetchMoviesByGenre } from "./reducers";
+import {
+  applyMiddleware,
+  combineReducers,
+  compose,
+  createStore,
+} from "redux";
+import { homeReducer } from "./modules/home";
+import { wishlistReducer } from "./modules/wishlist";
 import thunk from "redux-thunk";
 
 const composeEnhancers =
@@ -10,4 +16,9 @@ const composeEnhancers =
 
 const enhancer = composeEnhancers(applyMiddleware(thunk));
 
-export default createStore(fetchMoviesByGenre, enhancer);
+const reducers = combineReducers({
+  home: homeReducer,
+  wishlist: wishlistReducer,
+});
+
+export default createStore(reducers, enhancer);
