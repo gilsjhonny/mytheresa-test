@@ -1,22 +1,27 @@
 .MovieCard
   display: flex
   flex-direction: column
-  font-family: Roboto
+  font-family: Rubik
   font-weight: 400
   cursor: pointer
 
   &__info
     display: flex
     flex-direction: column
-    font-family: Roboto
+    font-family: Rubik
     padding-left: 10px
     transition: transform .1s ease-in-out
 
     &__title
-      font-weight: 600
+      color: #646464
+      font-weight: 400
       font-size: 18px
       margin-bottom: 5px
+      white-space: nowrap
+      text-overflow: ellipsis
+      overflow: hidden
 
     &__date
+      color: #727272
       font-weight: 300
-      font-size: 14px
+      font-size: 13px

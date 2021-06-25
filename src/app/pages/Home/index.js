@@ -4,8 +4,11 @@ import { Link } from "react-router-dom";
 import { fetchMovies } from "../../../redux/modules/home";
 import {
   Carousel,
+  CategoryTitle,
   Divider,
+  Footer,
   MovieCard,
+  MovieThumbnail,
   PageContainer,
 } from "../../components";
 import "./index.sass";
@@ -18,10 +21,15 @@ class Home extends React.Component {
   render() {
     const { movies } = this.props;
 
-    const getCarousel = (movies) => (
+    const getCarousel = (movies, category) => (
       <Carousel steps={220}>
         {movies.map((movie) => (
-          <Link to={`/movie/${movie.id}`}>
+          <Link
+            to={{
+              pathname: `/movie/${movie.id}`,
+              state: { category, test: true },
+            }}
+          >
             <MovieCard
               id={movie.id}
               key={movie.id}
@@ -36,15 +44,49 @@ class Home extends React.Component {
 
     if (!movies) return null;
 
+    const mostPopularMovieNowPLaying = movies.nowPlaying[0];
+    console.log(mostPopularMovieNowPLaying);
+
     return (
       <div className="Home">
+        <header>
+          <div
+            className="Home__header__backdrop"
+            style={{
+              backgroundImage: `url('${mostPopularMovieNowPLaying.backdrop_path}')`,
+            }}
+          />
+          <PageContainer className="Home_title__container">
+            <Link
+              className="Pick__link"
+              to={`movie/${mostPopularMovieNowPLaying.id}`}
+            >
+              <div>
+                <MovieThumbnail
+                  imgSrc={mostPopularMovieNowPLaying.image_src}
+                  width={200}
+                  height={280}
+                  noHoverEffect
+                />
+                <h1>Pick of The Week</h1>
+              </div>
+            </Link>
+          </PageContainer>
+        </header>
         <PageContainer>
-          {movies.nowPlaying && getCarousel(movies.nowPlaying)}
-          <Divider />
-          {movies.upcoming && getCarousel(movies.upcoming)}
-          <Divider />
-          {movies.topRated && getCarousel(movies.topRated)}
+          <CategoryTitle>Now Playing</CategoryTitle>
+          {movies.nowPlaying &&
+            getCarousel(movies.nowPlaying, "now-playing")}
+          {/* <Divider /> */}
+          <CategoryTitle>Upcoming</CategoryTitle>
+          {movies.upcoming &&
+            getCarousel(movies.upcoming, "upcoming")}
+          {/* <Divider /> */}
+          <CategoryTitle>Top Rated</CategoryTitle>
+          {movies.topRated &&
+            getCarousel(movies.topRated, "top-rated")}
         </PageContainer>
+        <Footer />
       </div>
     );
   }

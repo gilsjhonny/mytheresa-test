@@ -9,7 +9,7 @@ const MovieCard = (props) => {
     release_date = "Unknown",
     image_src = "",
     width = 200,
-    height = 330,
+    height = 310,
   } = props;
 
   return (

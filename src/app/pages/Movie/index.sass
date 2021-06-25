@@ -1,4 +1,6 @@
 .Movie
+  font-family: Rubik
+
   &__backdrop
     background-color: black
     background-size: cover
@@ -9,14 +11,39 @@
     display: flex
 
     &__left
-      transform: translateY(-270px)
+      transform: translateY(-43%)
       margin-right: 50px
       display: flex
       flex-direction: column
 
+      .AddToWishlistButton
+        margin-top: 20px
+
     &__right
       padding-top: 30px
       h1
-        font-family: Roboto
+        font-family: Rubik
         font-size: 49px
-        font-weight: 600
+        font-weight: 500
+        color: #646464
+        margin-bottom: 8px
+
+        span
+          color: #D0D0D0
+          font-weight: 300
+
+      &__genres
+        font-size: 20px
+        color: #8F8B1B
+        margin-bottom: 18px
+
+      h2
+        font-size: 30px
+        font-weight: 400
+        color: #646464
+        margin-bottom: 10px
+
+      p
+        font-family: Roboto
+        color: #979797
+        line-height: 23px

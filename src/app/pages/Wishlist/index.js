@@ -1,7 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { Divider, MovieCard, PageContainer } from "../../components";
+import {
+  Divider,
+  Footer,
+  MovieCard,
+  PageContainer,
+} from "../../components";
+import { ReactComponent as WishlistIcon } from "../../assets/wishlist.svg";
 import "./index.sass";
 
 const Wishlist = (props) => {
@@ -21,14 +27,16 @@ const Wishlist = (props) => {
           }}
         />
         <PageContainer className="Wishlist_title__container">
-          <h1>My Wishlist</h1>
+          <h1>
+            <WishlistIcon /> My Wishlist
+          </h1>
         </PageContainer>
       </header>
-      <PageContainer>
+      <PageContainer className="Wishlist__container">
         <Divider />
-        <div className="Wishlist__container">
-          {movieValues.length &&
-            movieValues.map((movie) => (
+        {!!movieValues.length && (
+          <div className="Wishlist__items__grid">
+            {movieValues.map((movie) => (
               <Link
                 className="MovieCardLink"
                 to={`/movie/${movie.id}`}
@@ -42,8 +50,13 @@ const Wishlist = (props) => {
                 />
               </Link>
             ))}
+          </div>
+        )}
+        <div className="Wishlist__items__grid--empty">
+          No movies added to your Wishlist
         </div>
       </PageContainer>
+      <Footer />
     </div>
   );
 };

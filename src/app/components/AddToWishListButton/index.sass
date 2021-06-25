@@ -4,10 +4,12 @@
   overflow: hidden
 
   &__text
+    flex: 1 1 0
     display: flex
     align-items: center
+    justify-content: center
 
-    padding: 0 20px
+    padding: 0 20px 0 10px
     height: 100%
 
     font-family: Roboto
@@ -15,6 +17,10 @@
     font-weight: 600px
 
     background: #E5DF48
+    transition: background .2s ease-in
+
+    &:hover
+      background: #d6d027
 
     &--gray
       background: #D6D6D6

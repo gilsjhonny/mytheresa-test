@@ -6,6 +6,7 @@ import {
 } from "../../../redux/modules/wishlist";
 import {
   AddToWishListButton,
+  Footer,
   MovieThumbnail,
   PageContainer,
 } from "../../components";
@@ -54,6 +55,7 @@ class Movie extends React.Component {
   render() {
     const { isAddedToWishlist } = this.props;
     const { movieDetails } = this.state;
+    console.log(this.props);
 
     if (!movieDetails) return null;
 
@@ -79,18 +81,23 @@ class Movie extends React.Component {
               />
             </div>
             <div className="Movie__details__right">
-              <h1>{movieDetails.title}</h1>
-              <p>{movieDetails.release_date}</p>
-              <div>
+              <h1>
+                {movieDetails.title}{" "}
+                <span>
+                  ({movieDetails.release_date.substr(0, 4)})
+                </span>
+              </h1>
+              <div className="Movie__details__right__genres">
                 {movieDetails.genres
                   .map((genre) => genre.name)
                   .join(", ")}
               </div>
-              <h2>Overview</h2>
+              <h2>Overview </h2>
               {movieDetails && <p>{movieDetails.overview}</p>}
             </div>
           </div>
         </PageContainer>
+        <Footer />
       </div>
     );
   }

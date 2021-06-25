@@ -1,19 +1,20 @@
 .Carousel
   display: flex
   align-items: center
+  position: relative
+  margin-bottom: 30px
 
   &__viewport
     flex: 1 1 0
     overflow: hidden
     position: relative
-    margin: 0 15px
-    padding: 60px 0
+    padding: 30px 20px
     display: flex
 
     &__content
       flex: 1 1 0
       display: flex
-      transition: transform .1s ease-in
+      transition: transform .5s ease-out
 
       & > *
         flex: 0 0 auto
@@ -21,36 +22,38 @@
       & > *:not(:last-child)
         margin-right: 40px
 
-    &__border--left,
-    &__border--right
-      position: absolute
-      height: 100%
-      width: 130px
-      background-color: red
-      flex: 0 0 auto
-      z-index: 4
-      top: 0
-
-    &__border--left
-      left: 0
-      background: rgb(255,255,255)
-      background: linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%)
-
-    &__border--right
-      right: 0
-      background: rgb(255,255,255)
-      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%)
-
   &__button--left,
   &__button--right
     background: transparent
     border: none
     cursor: pointer
+    height: 50px
+    background: white
+    border-radius: 50%
+    width: 50px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex: 0 0 auto
+    position: absolute
+    z-index: 4
+    top: 50%
+    padding: 0
+    transform: translateY(-50%)
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
+
+    &:hover svg
+      color: #E5DF48
 
     svg
-      color: #E5DF48
-      height: 35px
+      color: #C7C7C7
+      transition: color .2s ease-in
+      height: 19px
 
   &__button--left
+    left: -25px
+
+  &__button--right
+    right: -25px
     svg
       transform: rotate(180deg)

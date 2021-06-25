@@ -1,7 +1,12 @@
 .Wishlist
+  display: flex
+  flex-direction: column
+
   header
-    border-bottom: 54px solid #E5DF48
+    border-bottom: 30px solid #F6F6F6
     margin-bottom: 80px
+    flex: 0 0 auto
+
     .Wishlist__backdrop
       background-color: black
       background-size: cover
@@ -11,23 +16,43 @@
     .Wishlist_title__container
       position: relative
       h1
-        background: #E5DF48
+        background: #F6F6F6
+        color: #646464
         position: absolute
         top: -37px
         left: 0
-        font-family: Roboto
+        font-family: Rubik
         font-size: 24px
-        font-weight: 500
-        padding: 30px 50px
+        font-weight: 400
+        padding: 15px 30px
         border-radius: 13px
 
-  &__container
-    padding: 40px 0
-    display: grid
-    grid-template-columns: repeat(auto-fit, 300px)
-    grid-auto-rows: minmax(150px, 1fr)
+        svg
+          height: 19px
+          margin-right: 8px
 
-  .MovieCardLink
-    display: flex
-    justify-content: center
-    padding: 20px 10px
+  &__container
+    // min-height: 300px
+    flex: 1 0 auto
+
+    .Wishlist__items__grid
+      padding: 40px 0
+      display: grid
+      grid-template-columns: repeat(auto-fit, 300px)
+      grid-auto-rows: minmax(150px, 1fr)
+
+      &--empty
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0 200px
+        font-family: Rubik
+        font-size: 20px
+        font-weight: 400
+        color: #646464
+        width: 100%
+
+      .MovieCardLink
+        display: flex
+        justify-content: center
+        padding: 20px 10px
