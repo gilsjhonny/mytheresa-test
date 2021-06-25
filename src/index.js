@@ -3,7 +3,9 @@ import ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
 import AppRoot from "./app/AppRoot.js";
 import { Provider } from "react-redux";
-import store from "./redux/store";
+import configureStore from "./redux/store";
+
+const store = configureStore(window.INITIAL_STATE);
 
 function render(Component) {
   ReactDOM.hydrate(

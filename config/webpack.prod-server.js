@@ -1,6 +1,7 @@
 const path = require("path");
 const externals = require("../config/node-externals");
 const webpack = require("webpack");
+const ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
 
 module.exports = {
   name: "server",
@@ -10,7 +11,6 @@ module.exports = {
   mode: "production",
   output: {
     filename: "prod-server-bundle.js",
-    chunkFilename: "[name].js",
     path: path.resolve(__dirname, "../build"),
     libraryTarget: "commonjs2",
   },
@@ -24,6 +24,7 @@ module.exports = {
       {
         test: /\.sass$/,
         use: [
+          ExtractCssChunks.loader,
           "css-loader",
           "resolve-url-loader",
           { loader: "postcss-loader", options: { sourceMap: true } },
@@ -58,6 +59,7 @@ module.exports = {
     extensions: [".js", ".sass"],
   },
   plugins: [
+    new ExtractCssChunks(),
     new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 }),
   ],
 };

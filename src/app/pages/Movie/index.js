@@ -55,7 +55,6 @@ class Movie extends React.Component {
   render() {
     const { isAddedToWishlist } = this.props;
     const { movieDetails } = this.state;
-    console.log(this.props);
 
     if (!movieDetails) return null;
 

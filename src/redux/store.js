@@ -1,12 +1,6 @@
-import {
-  applyMiddleware,
-  combineReducers,
-  compose,
-  createStore,
-} from "redux";
-import { homeReducer } from "./modules/home";
-import { wishlistReducer } from "./modules/wishlist";
+import { applyMiddleware, compose, createStore } from "redux";
 import thunk from "redux-thunk";
+import reducers from "./reducers";
 
 const composeEnhancers =
   typeof window === "object" &&
@@ -16,9 +10,14 @@ const composeEnhancers =
 
 const enhancer = composeEnhancers(applyMiddleware(thunk));
 
-const reducers = combineReducers({
-  home: homeReducer,
-  wishlist: wishlistReducer,
-});
+export default (initialState) => {
+  const store = createStore(reducers, initialState, enhancer);
 
-export default createStore(reducers, enhancer);
+  if (module.hot) {
+    module.hot.accept("./reducers", () =>
+      store.replaceReducer(require("./reducers").fetchArticle)
+    );
+  }
+
+  return store;
+};

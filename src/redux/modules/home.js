@@ -52,7 +52,7 @@ const fetchMoviesError = (error) => ({
 });
 
 // SIDE EFFECTS
-export const fetchMovies = () => async (dispatch) => {
+export const fetchMovies = async (dispatch) => {
   dispatch(fetchMoviesBegin());
 
   const urls = [

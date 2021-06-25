@@ -15,6 +15,18 @@ const server = express();
 
 const isProd = process.env.NODE_ENV === "production";
 const isDev = !isProd;
+const PORT = process.env.PORT || 8080;
+let isBuilt = false;
+
+const done = () => {
+  if (isBuilt) return;
+  server.listen(PORT, () => {
+    isBuilt = true;
+    console.log(
+      `Server listening on http://*.local:${PORT} in ${process.env.NODE_ENV}`
+    );
+  });
+};
 
 if (isDev) {
   // WEBPACK MIDDLEWARES
@@ -35,18 +47,20 @@ if (isDev) {
   );
 
   console.log("Middleware enabled");
+
+  done();
   // --------------------------------------------
 } else {
   webpack([configProdClient, configProdServer]).run((err, stats) => {
     const clientStats = stats.toJson().children[0];
+    const render =
+      require("../../build/prod-server-bundle.js").default;
+
     console.log(
       stats.toString({
         colors: true,
       })
     );
-
-    const render =
-      require("../../build/prod-server-bundle.js").default;
 
     console.log("Running webpack in production...");
 
@@ -59,9 +73,7 @@ if (isDev) {
     );
 
     server.use(render({ clientStats }));
+
+    done();
   });
 }
-
-server.listen(process.env.PORT || 8080, () => {
-  console.log("Server is listening");
-});

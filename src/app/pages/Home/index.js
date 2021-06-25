@@ -5,7 +5,6 @@ import { fetchMovies } from "../../../redux/modules/home";
 import {
   Carousel,
   CategoryTitle,
-  Divider,
   Footer,
   MovieCard,
   MovieThumbnail,
@@ -15,7 +14,9 @@ import "./index.sass";
 
 class Home extends React.Component {
   componentDidMount() {
-    this.props.dispatch(fetchMovies());
+    if (!this.props.movies) {
+      this.props.dispatch(fetchMovies);
+    }
   }
 
   render() {
@@ -45,7 +46,6 @@ class Home extends React.Component {
     if (!movies) return null;
 
     const mostPopularMovieNowPLaying = movies.nowPlaying[0];
-    console.log(mostPopularMovieNowPLaying);
 
     return (
       <div className="Home">
@@ -77,11 +77,9 @@ class Home extends React.Component {
           <CategoryTitle>Now Playing</CategoryTitle>
           {movies.nowPlaying &&
             getCarousel(movies.nowPlaying, "now-playing")}
-          {/* <Divider /> */}
           <CategoryTitle>Upcoming</CategoryTitle>
           {movies.upcoming &&
             getCarousel(movies.upcoming, "upcoming")}
-          {/* <Divider /> */}
           <CategoryTitle>Top Rated</CategoryTitle>
           {movies.topRated &&
             getCarousel(movies.topRated, "top-rated")}

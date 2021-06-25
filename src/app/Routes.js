@@ -31,6 +31,7 @@ export default () => (
       <Route path={WISHLIST.path}>
         <UniversalComponent page={WISHLIST.name} />
       </Route>
+      {/* <Route component={NotFound} /> */}
     </Switch>
   </div>
 );

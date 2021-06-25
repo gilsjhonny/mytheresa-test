@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+
 const nodeModules = path.resolve(__dirname, "../node_modules");
 const externals = fs
   .readdirSync(nodeModules)

@@ -35,7 +35,6 @@ class Carousel extends React.Component {
   render() {
     const { children, steps } = this.props;
     const { viewportWidth, viewportContentWidth } = this.state;
-    console.log(viewportWidth);
 
     const moveToRight = () =>
       this.setState((prev) => {
@@ -46,7 +45,6 @@ class Carousel extends React.Component {
 
     const moveToLeft = () =>
       this.setState((prev) => {
-        console.log(prev);
         return {
           offset:
             Math.abs(prev.offset - steps) >

@@ -3,39 +3,70 @@ import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router";
 import Routes from "../app/Routes";
 import { Provider } from "react-redux";
-import store from "../redux/store";
+import configureStore from "../redux/store";
 import {
   clearChunks,
   flushChunkNames,
 } from "react-universal-component/server";
 import flushChunks from "webpack-flush-chunks";
+import { fetchMovies } from "../redux/modules/home";
 
 export default ({ clientStats }) =>
-  (req, res) => {
+  async (req, res) => {
     if (req.url === "/__webpack_hmr") return;
 
-    clearChunks();
-    const { cssHash, js, styles } = flushChunks(clientStats, {
-      chunkNames: flushChunkNames(),
-    });
+    // Setup store
+    const store = configureStore();
 
-    const app = renderToString(
-      <Provider store={store}>
-        <StaticRouter location={req.url} context={{}}>
-          <Routes />
-        </StaticRouter>
-      </Provider>
-    );
+    // Load Movies
+    const loadMovies = (site, slug) => {
+      console.log("dispatching");
+      return store.dispatch(fetchMovies);
+    };
 
-    res.send(`<html>
-    <head>
-      <title>SSR</title>
-      ${styles}
-    </head>
-    <body>
-      <div id="react-root">${app}</div>
-      ${js}
-      ${cssHash}
-    </body>
-  </html>`);
+    const app = () =>
+      renderToString(
+        <Provider store={store}>
+          <StaticRouter location={req.originalUrl} context={{}}>
+            <Routes />
+          </StaticRouter>
+        </Provider>
+      );
+
+    const template = () => {
+      const appOutput = app();
+
+      // Clear Chunks
+      clearChunks();
+      const { cssHash, js, styles } = flushChunks(clientStats, {
+        chunkNames: flushChunkNames(),
+      });
+
+      return `
+      <html>
+        <head>
+          <title>SSR</title>
+          ${styles}
+        </head>
+        <body>
+          <div id="react-root">${appOutput}</div>
+          ${js}
+          <script>
+            window.INITIAL_STATE = ${JSON.stringify(store.getState())}
+          </script>
+          ${cssHash}
+      </body>
+    </html>`;
+    };
+
+    if (req.path.match(/^\/$/) || req.path.match(/^\/index.html$/)) {
+      try {
+        await loadMovies();
+        res.send(template());
+      } catch (err) {
+        console.log(err);
+      }
+    } else {
+      res.send(template());
+    }
   };
