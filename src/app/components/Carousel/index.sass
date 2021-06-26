@@ -1,3 +1,5 @@
+@use '../../styles/global/variables'
+
 .Carousel
   display: flex
   align-items: center
@@ -52,10 +54,10 @@
     cursor: pointer
 
     &:hover svg
-      color: #E5DF48
+      color: variables.$confetti
 
     svg
-      color: #C7C7C7
+      color: variables.$alto
       height: 19px
       transition: color .2s ease-in
 

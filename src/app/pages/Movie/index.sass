@@ -1,3 +1,6 @@
+@use '../../styles/global/fonts'
+@use '../../styles/global/variables'
+
 .Movie
   font-family: Rubik
 
@@ -24,7 +27,7 @@
       padding-top: 30px
 
       h1
-        color: #646464
+        color: variables.$doveGray
         font-family: Rubik
         font-size: 49px
         font-weight: 500
@@ -32,22 +35,22 @@
         margin-bottom: 8px
 
         span
-          color: #D0D0D0
+          color: variables.$alto
           font-weight: 300
 
       .genres
-        color: #8F8B1B
+        color: darken(variables.$confetti, 30%)
         font-size: 20px
         margin-bottom: 18px
 
       h2
-        color: #646464
+        color: variables.$doveGray
         font-size: 30px
         font-weight: 400
 
         margin-bottom: 10px
 
       p
-        color: #979797
+        color: variables.$dustyGray
         font-family: Roboto
         line-height: 23px

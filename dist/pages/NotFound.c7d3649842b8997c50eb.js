@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4,9],{57:function(n,e,t){},7:function(n,e,t){"use strict";t.r(e);var o=t(0),a=t.n(o);t(57);e.default=function(){return a.a.createElement("div",{className:"NotFound"},a.a.createElement("span",null,"Oops, 404 not found"))}}}]);

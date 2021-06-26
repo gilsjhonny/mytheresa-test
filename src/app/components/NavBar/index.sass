@@ -1,3 +1,5 @@
+@use '../../styles/global/variables'
+
 .NavBar
   align-items: center
   background: white
@@ -12,14 +14,14 @@
     padding: 0 30px
 
     .logo svg
-      color: #646464
+      color: variables.$doveGray
       height: 30px
 
     .link
       display: flex
       align-items: center
 
-      color: #646464
+      color: variables.$doveGray
       font-family: Roboto
       font-size: 18px
       font-weight: 400
@@ -28,7 +30,7 @@
       transition: color .2s ease-in
 
       &:hover
-        color: #414141
+        color: darken(variables.$doveGray, 40%)
 
       svg
         height: 17px

@@ -1,3 +1,5 @@
+@use '../../styles/global/variables'
+
 .AddToWishlistButton
   border-radius: 10px
   height: 60px
@@ -17,14 +19,14 @@
     font-size: 18px
     font-weight: 600px
 
-    background: #E5DF48
+    background: variables.$confetti
     transition: background .2s ease-in
 
     &:hover
-      background: #d6d027
+      background: darken(variables.$confetti, 10%)
 
     &.active
-      background: #D6D6D6
+      background: variables.$alto
 
   & > .leading-icon
     display: flex
@@ -33,8 +35,8 @@
     height: 100%
     padding: 15px 20px
 
-    background: #353535
+    background: variables.$tundora
 
     svg
-      color: #FFF
+      color: variables.$white
       height: 90%

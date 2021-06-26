@@ -10,8 +10,8 @@ import {
 import { WishlistIcon } from "../../components/Icons";
 import "./index.sass";
 
-const MOVIE_THUMBNAIL_HEIGHT = 220;
-const MOVIE_THUMBNAIL_WIDTH = 300;
+const MOVIE_THUMBNAIL_HEIGHT = 300;
+const MOVIE_THUMBNAIL_WIDTH = 220;
 
 const Wishlist = (props) => {
   const { movies } = props;

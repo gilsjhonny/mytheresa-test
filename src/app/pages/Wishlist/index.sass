@@ -1,9 +1,11 @@
+@use '../../styles/global/variables'
+
 .Wishlist
   display: flex
   flex-direction: column
 
   header
-    border-bottom: 30px solid #F6F6F6
+    border-bottom: 30px solid variables.$wildSand
     flex: 0 0 auto
     margin-bottom: 80px
 
@@ -21,14 +23,14 @@
         top: -37px
         left: 0
 
-        color: #646464
+        color: variables.$doveGray
         font-family: Rubik
         font-size: 24px
         font-weight: 400
         padding: 15px 30px
         border-radius: 13px
 
-        background: #F6F6F6
+        background: variables.$wildSand
         svg
           height: 19px
           margin-right: 8px
@@ -51,7 +53,7 @@
         font-family: Rubik
         font-size: 20px
         font-weight: 400
-        color: #646464
+        color: variables.$doveGray
         width: 100%
 
       .MovieCardLink
