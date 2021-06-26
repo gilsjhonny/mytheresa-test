@@ -71,7 +71,7 @@ export const fetchMovies = async (dispatch) => {
         backdrop_path: `https://image.tmdb.org/t/p/original${movie.backdrop_path}`,
         title: movie.title,
         release_date: movie.release_date,
-        image_src: `https://image.tmdb.org/t/p/w300${movie.poster_path}`,
+        poster_src: `https://image.tmdb.org/t/p/w300${movie.poster_path}`,
       }));
       return movies;
     } catch (error) {}

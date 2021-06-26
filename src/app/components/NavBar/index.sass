@@ -1,32 +1,35 @@
 .NavBar
-  height: 50px
   align-items: center
   background: white
+  height: 50px
 
-  &__container
+  .container
     display: flex
-    justify-content: space-between
-    height: 100%
     align-items: center
+    justify-content: space-between
+
+    height: 100%
     padding: 0 30px
 
-  &__logo svg
-    color: #646464
-    height: 30px
+    .logo svg
+      color: #646464
+      height: 30px
 
-  &__link
-    display: flex
-    align-items: center
-    font-family: Roboto
-    font-size: 18px
-    font-weight: 400
-    text-decoration: none
-    color: #646464
-    transition: color .2s ease-in
+    .link
+      display: flex
+      align-items: center
 
-    &:hover
-      color: #414141
+      color: #646464
+      font-family: Roboto
+      font-size: 18px
+      font-weight: 400
+      text-decoration: none
 
-    &__icon
-      height: 17px
-      margin-right: 8px
+      transition: color .2s ease-in
+
+      &:hover
+        color: #414141
+
+      svg
+        height: 17px
+        margin-right: 8px

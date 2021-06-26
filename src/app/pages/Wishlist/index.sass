@@ -4,42 +4,44 @@
 
   header
     border-bottom: 30px solid #F6F6F6
-    margin-bottom: 80px
     flex: 0 0 auto
+    margin-bottom: 80px
 
-    .Wishlist__backdrop
+    .backdrop-img
       background-color: black
       background-size: cover
       height: 400px
       opacity: 0.7
 
-    .Wishlist_title__container
+    .wishlist-title-container
       position: relative
+
       h1
-        background: #F6F6F6
-        color: #646464
         position: absolute
         top: -37px
         left: 0
+
+        color: #646464
         font-family: Rubik
         font-size: 24px
         font-weight: 400
         padding: 15px 30px
         border-radius: 13px
 
+        background: #F6F6F6
         svg
           height: 19px
           margin-right: 8px
 
-  &__container
-    // min-height: 300px
+  .movies-container
     flex: 1 0 auto
 
-    .Wishlist__items__grid
-      padding: 40px 0
+    .grid
       display: grid
       grid-template-columns: repeat(auto-fit, 300px)
       grid-auto-rows: minmax(150px, 1fr)
+
+      padding: 40px 0
 
       &--empty
         display: flex

@@ -7,84 +7,68 @@ import {
   CategoryTitle,
   Footer,
   MovieCard,
-  MovieThumbnail,
-  PageContainer,
+  Container,
 } from "../../components";
-import "./index.sass";
+import Header from "./Header";
+
+const CAROUSEL_STEPS = 220;
 
 class Home extends React.Component {
   componentDidMount() {
-    if (!this.props.movies) {
-      this.props.dispatch(fetchMovies);
-    }
+    const { dispatch, movies } = this.props;
+
+    if (!movies) dispatch(fetchMovies);
   }
 
   render() {
     const { movies } = this.props;
 
-    const getCarousel = (movies, category) => (
-      <Carousel steps={220}>
-        {movies.map((movie) => (
-          <Link
-            to={{
-              pathname: `/movie/${movie.id}`,
-              state: { category, test: true },
-            }}
-          >
+    const renderMoviesCarousel = (movies) => (
+      <Carousel steps={CAROUSEL_STEPS}>
+        {movies.map(({ id, title, release_date, poster_src }) => (
+          <Link key={id} to={`/movie/${id}`}>
             <MovieCard
-              id={movie.id}
-              key={movie.id}
-              title={movie.title}
-              release_date={movie.release_date}
-              image_src={movie.image_src}
+              id={id}
+              key={id}
+              title={title}
+              releaseDate={release_date}
+              posterSrc={poster_src}
             />
           </Link>
         ))}
       </Carousel>
     );
 
-    if (!movies) return null;
+    // Candidate to become a component of its own, let's keep it
+    // here in the meantime
+    const renderCategorySection = (title, category) => (
+      <>
+        <CategoryTitle>{title}</CategoryTitle>
+        {movies[category] &&
+          renderMoviesCarousel(movies[category], category)}
+      </>
+    );
 
-    const mostPopularMovieNowPLaying = movies.nowPlaying[0];
+    // To display Pick of the week
+    const mostPopularMovieNowPLaying = movies && movies.nowPlaying[0];
 
     return (
       <div className="Home">
-        <header>
-          <div
-            className="Home__header__backdrop"
-            style={{
-              backgroundImage: `url('${mostPopularMovieNowPLaying.backdrop_path}')`,
-            }}
-          />
-          <PageContainer className="Home_title__container">
-            <Link
-              className="Pick__link"
-              to={`movie/${mostPopularMovieNowPLaying.id}`}
-            >
-              <div>
-                <MovieThumbnail
-                  imgSrc={mostPopularMovieNowPLaying.image_src}
-                  width={200}
-                  height={280}
-                  noHoverEffect
-                />
-                <h1>Pick of The Week</h1>
-              </div>
-            </Link>
-          </PageContainer>
-        </header>
-        <PageContainer>
-          <CategoryTitle>Now Playing</CategoryTitle>
-          {movies.nowPlaying &&
-            getCarousel(movies.nowPlaying, "now-playing")}
-          <CategoryTitle>Upcoming</CategoryTitle>
-          {movies.upcoming &&
-            getCarousel(movies.upcoming, "upcoming")}
-          <CategoryTitle>Top Rated</CategoryTitle>
-          {movies.topRated &&
-            getCarousel(movies.topRated, "top-rated")}
-        </PageContainer>
-        <Footer />
+        {movies && (
+          <Header featuredMovie={mostPopularMovieNowPLaying} />
+        )}
+        <Container>
+          {movies ? (
+            <>
+              {renderCategorySection("Now Playing", "nowPlaying")}
+              {renderCategorySection("Upcoming", "upcoming")}
+              {renderCategorySection("Top Rated", "topRated")}
+            </>
+          ) : (
+            <div>Error: loading movies</div> // We could have an error message component
+          )}
+          <Footer />
+        </Container>
       </div>
     );
   }

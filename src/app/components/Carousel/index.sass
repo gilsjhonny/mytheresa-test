@@ -1,59 +1,68 @@
 .Carousel
   display: flex
   align-items: center
-  position: relative
+
   margin-bottom: 30px
+  position: relative
 
-  &__viewport
+  .viewport
     flex: 1 1 0
-    overflow: hidden
-    position: relative
-    padding: 30px 20px
-    display: flex
 
-    &__content
+    display: flex
+    overflow: hidden
+    padding: 30px 20px
+    position: relative
+
+    &-content
       flex: 1 1 0
+
       display: flex
       transition: transform .5s ease-out
 
+      // carousel items could be of any kind
       & > *
         flex: 0 0 auto
 
       & > *:not(:last-child)
         margin-right: 40px
 
-  &__button--left,
-  &__button--right
-    background: transparent
-    border: none
-    cursor: pointer
-    height: 50px
-    background: white
-    border-radius: 50%
-    width: 50px
-    display: flex
-    justify-content: center
-    align-items: center
+  .arrow-btn--left,
+  .arrow-btn--right
     flex: 0 0 auto
+
+    display: flex
+    align-items: center
+    justify-content: center
+
     position: absolute
-    z-index: 4
     top: 50%
+
+    height: 50px
+    width: 50px
     padding: 0
-    transform: translateY(-50%)
+
+    background: white
+    border: none
+    border-radius: 50%
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
+
+    transform: translateY(-50%)
+    z-index: 4
+
+    cursor: pointer
 
     &:hover svg
       color: #E5DF48
 
     svg
       color: #C7C7C7
-      transition: color .2s ease-in
       height: 19px
+      transition: color .2s ease-in
 
-  &__button--left
+  .arrow-btn--left
     left: -25px
 
-  &__button--right
+  .arrow-btn--right
     right: -25px
     svg
       transform: rotate(180deg)

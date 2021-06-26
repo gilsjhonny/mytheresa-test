@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{9:function(n,e,t){"use strict";t.r(e);var i=t(0),s=t.n(i);e.default=function(){return s.a.createElement("div",null,"Wishlist")}}}]);

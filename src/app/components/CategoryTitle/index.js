@@ -1,5 +1,6 @@
 import React from "react";
-import { ReactComponent as ClapperBoardIcon } from "../../assets/clapperboard.svg";
+import PropTypes from "prop-types";
+import { ClapperBoardIcon } from "../Icons";
 import "./index.sass";
 
 const CategoryTitle = (props) => {
@@ -10,6 +11,10 @@ const CategoryTitle = (props) => {
       <ClapperBoardIcon /> {children}
     </h2>
   );
+};
+
+CategoryTitle.propTypes = {
+  children: PropTypes.node,
 };
 
 export default CategoryTitle;

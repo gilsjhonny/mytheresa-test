@@ -3,7 +3,7 @@ import "./index.sass";
 
 const Footer = () => (
   <footer className="Footer">
-    Designed & Coded by Myself &copy;
+    Designed & Coded by Jhonny Gil &copy;
   </footer>
 );
 

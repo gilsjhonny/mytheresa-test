@@ -5,28 +5,36 @@ import "./index.sass";
 
 const MovieThumbnail = (props) => {
   const {
+    className,
     height = 330,
-    imgSrc,
     noHoverEffect = false,
+    posterSrc,
     width = 200,
   } = props;
 
+  const thumbnailClassNames = classNames(
+    "MovieThumbnail",
+    {
+      noHoverEffect: noHoverEffect,
+    },
+    className
+  );
+
   return (
     <div
-      className={classNames("MovieThumbnail", {
-        noHoverEffect: noHoverEffect,
-      })}
+      className={thumbnailClassNames}
       style={{ width: `${width}px`, height: `${height}px` }}
     >
-      <img alt="movie-poster" src={imgSrc} />
+      <img alt="movie-poster" src={posterSrc} />
     </div>
   );
 };
 
 MovieThumbnail.propTypes = {
-  imgSrc: PropTypes.string,
-  width: PropTypes.number,
+  className: PropTypes.string,
   height: PropTypes.number,
+  posterSrc: PropTypes.string,
+  width: PropTypes.number,
 };
 
 export default MovieThumbnail;

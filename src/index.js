@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
-import AppRoot from "./app/AppRoot.js";
+
+import App from "./app/index.js";
 import { Provider } from "react-redux";
 import configureStore from "./redux/store";
 
+// Get initial state previously loaded on server side
 const store = configureStore(window.INITIAL_STATE);
 
 function render(Component) {
@@ -17,11 +19,11 @@ function render(Component) {
     document.getElementById("react-root")
   );
 }
-render(AppRoot);
+render(App);
 
 if (module.hot) {
-  module.hot.accept("./app/AppRoot.js", () => {
-    const NewAppRoot = require("./app/AppRoot.js").default;
-    render(NewAppRoot);
+  module.hot.accept("./app/index.js", () => {
+    const NewApp = require("./app/index.js").default;
+    render(NewApp);
   });
 }

@@ -1,27 +1,31 @@
 .MovieCard
   display: flex
   flex-direction: column
+
   font-family: Rubik
   font-weight: 400
+
   cursor: pointer
 
-  &__info
+  .movie-info
     display: flex
     flex-direction: column
+
     font-family: Rubik
     padding-left: 10px
     transition: transform .1s ease-in-out
 
-    &__title
+    .title
       color: #646464
       font-weight: 400
       font-size: 18px
-      margin-bottom: 5px
-      white-space: nowrap
       text-overflow: ellipsis
+      white-space: nowrap
+
+      margin-bottom: 5px
       overflow: hidden
 
-    &__date
+    .release-date
       color: #727272
       font-weight: 300
       font-size: 13px

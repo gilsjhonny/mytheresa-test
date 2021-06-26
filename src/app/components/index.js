@@ -6,4 +6,4 @@ export { default as Footer } from "./Footer";
 export { default as MovieCard } from "./MovieCard";
 export { default as MovieThumbnail } from "./MovieThumbnail";
 export { default as NavBar } from "./NavBar";
-export { default as PageContainer } from "./PageContainer";
+export { default as Container } from "./Container";

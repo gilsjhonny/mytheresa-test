@@ -5,15 +5,19 @@ import {
   Divider,
   Footer,
   MovieCard,
-  PageContainer,
+  Container,
 } from "../../components";
-import { ReactComponent as WishlistIcon } from "../../assets/wishlist.svg";
+import { WishlistIcon } from "../../components/Icons";
 import "./index.sass";
+
+const MOVIE_THUMBNAIL_HEIGHT = 220;
+const MOVIE_THUMBNAIL_WIDTH = 300;
 
 const Wishlist = (props) => {
   const { movies } = props;
   const movieValues = Object.values(movies);
 
+  // Pick first movie of the array to show a backdrop image
   const imgBackdrop =
     !!movieValues.length && movieValues[0].backdrop_path;
 
@@ -21,41 +25,42 @@ const Wishlist = (props) => {
     <div className="Wishlist">
       <header>
         <div
-          className="Wishlist__backdrop"
+          className="backdrop-img"
           style={{
             backgroundImage: `url('${imgBackdrop}')`,
           }}
         />
-        <PageContainer className="Wishlist_title__container">
+        <Container className="wishlist-title-container">
           <h1>
             <WishlistIcon /> My Wishlist
           </h1>
-        </PageContainer>
+        </Container>
       </header>
-      <PageContainer className="Wishlist__container">
+      <Container className="movies-container">
         <Divider />
         {!!movieValues.length && (
-          <div className="Wishlist__items__grid">
+          <div className="grid">
             {movieValues.map((movie) => (
               <Link
                 className="MovieCardLink"
+                key={movie.id}
                 to={`/movie/${movie.id}`}
               >
                 <MovieCard
-                  image_src={movie.poster_src}
+                  height={MOVIE_THUMBNAIL_HEIGHT}
+                  posterSrc={movie.poster_src}
+                  releaseDate={movie.release_date}
                   title={movie.title}
-                  release_date={movie.release_date}
-                  width={220}
-                  height={300}
+                  width={MOVIE_THUMBNAIL_WIDTH}
                 />
               </Link>
             ))}
           </div>
         )}
-        <div className="Wishlist__items__grid--empty">
+        <div className="grid--empty">
           No movies added to your Wishlist
         </div>
-      </PageContainer>
+      </Container>
       <Footer />
     </div>
   );

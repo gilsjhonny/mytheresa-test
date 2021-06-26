@@ -1,6 +1,7 @@
 import React from "react";
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router";
+
 import Routes from "../app/Routes";
 import { Provider } from "react-redux";
 import configureStore from "../redux/store";
@@ -20,7 +21,6 @@ export default ({ clientStats }) =>
 
     // Load Movies
     const loadMovies = (site, slug) => {
-      console.log("dispatching");
       return store.dispatch(fetchMovies);
     };
 
