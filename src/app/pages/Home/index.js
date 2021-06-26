@@ -67,7 +67,6 @@ class Home extends React.Component {
           ) : (
             <div>Error: loading movies</div> // We could have an error message component
           )}
-          <Footer />
         </Container>
       </div>
     );

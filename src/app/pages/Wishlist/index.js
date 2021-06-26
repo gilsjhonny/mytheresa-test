@@ -38,7 +38,7 @@ const Wishlist = (props) => {
       </header>
       <Container className="movies-container">
         <Divider />
-        {!!movieValues.length && (
+        {!!movieValues.length ? (
           <div className="grid">
             {movieValues.map((movie) => (
               <Link
@@ -56,12 +56,12 @@ const Wishlist = (props) => {
               </Link>
             ))}
           </div>
+        ) : (
+          <div className="grid--empty">
+            No movies added to your Wishlist
+          </div>
         )}
-        <div className="grid--empty">
-          No movies added to your Wishlist
-        </div>
       </Container>
-      <Footer />
     </div>
   );
 };

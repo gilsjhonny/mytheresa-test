@@ -1,13 +1,11 @@
 @use '../../styles/global/variables'
 
 .Wishlist
-  display: flex
-  flex-direction: column
 
   header
     border-bottom: 30px solid variables.$wildSand
     flex: 0 0 auto
-    margin-bottom: 80px
+    margin-bottom: 40px
 
     .backdrop-img
       background-color: black
@@ -43,18 +41,17 @@
       grid-template-columns: repeat(auto-fit, 300px)
       grid-auto-rows: minmax(150px, 1fr)
 
-      padding: 40px 0
+      padding-bottom: 20px
 
       &--empty
-        display: flex
-        justify-content: center
-        align-items: center
-        padding: 0 200px
+        padding-top: 80px
+        width: 100%
+
+        color: variables.$doveGray
         font-family: Rubik
         font-size: 20px
         font-weight: 400
-        color: variables.$doveGray
-        width: 100%
+        text-align: center
 
       .MovieCardLink
         display: flex

@@ -104,7 +104,6 @@ class Movie extends React.Component {
             </div>
           </div>
         </Container>
-        <Footer />
       </div>
     );
   }

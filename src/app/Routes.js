@@ -2,9 +2,9 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { Switch } from "react-router";
 import universal from "react-universal-component";
-import { NavBar } from "./components";
-import { WishlistIcon } from "./components/Icons";
+
 import { routes } from "./constants";
+import PageLayout from "./components/PageLayout";
 
 const { HOME, MOVIE, WISHLIST } = routes;
 
@@ -14,15 +14,12 @@ const UniversalComponent = universal(
 );
 
 export default () => {
-  const wishlistNavItem = { ...WISHLIST, icon: <WishlistIcon /> };
-
   const getUniversalComponent = (pageName, match) => (
     <UniversalComponent page={pageName} {...(match && { match })} />
   );
 
   return (
-    <div>
-      <NavBar items={[wishlistNavItem]} />
+    <PageLayout>
       <Switch>
         <Route exact path={HOME.path}>
           {getUniversalComponent(HOME.name)}
@@ -38,6 +35,6 @@ export default () => {
         </Route>
         <Route>{getUniversalComponent("NotFound")}</Route>
       </Switch>
-    </div>
+    </PageLayout>
   );
 };
