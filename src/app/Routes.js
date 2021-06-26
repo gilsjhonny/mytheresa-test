@@ -16,25 +16,27 @@ const UniversalComponent = universal(
 export default () => {
   const wishlistNavItem = { ...WISHLIST, icon: <WishlistIcon /> };
 
+  const getUniversalComponent = (pageName, match) => (
+    <UniversalComponent page={pageName} {...(match && { match })} />
+  );
+
   return (
     <div>
       <NavBar items={[wishlistNavItem]} />
       <Switch>
         <Route exact path={HOME.path}>
-          <UniversalComponent page={HOME.name} />
+          {getUniversalComponent(HOME.name)}
         </Route>
         <Route
           path={MOVIE.path}
-          render={({ match }) => (
-            <UniversalComponent match={match} page={MOVIE.name} />
-          )}
+          render={({ match }) =>
+            getUniversalComponent(MOVIE.name, match)
+          }
         />
         <Route path={WISHLIST.path}>
-          <UniversalComponent page={WISHLIST.name} />
+          {getUniversalComponent(WISHLIST.name)}
         </Route>
-        <Route>
-          <UniversalComponent page={"NotFound"} />
-        </Route>
+        <Route>{getUniversalComponent("NotFound")}</Route>
       </Switch>
     </div>
   );

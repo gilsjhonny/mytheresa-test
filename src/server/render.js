@@ -5,10 +5,7 @@ import { StaticRouter } from "react-router";
 import Routes from "../app/Routes";
 import { Provider } from "react-redux";
 import configureStore from "../redux/store";
-import {
-  clearChunks,
-  flushChunkNames,
-} from "react-universal-component/server";
+import { flushChunkNames } from "react-universal-component/server";
 import flushChunks from "webpack-flush-chunks";
 import { fetchMovies } from "../redux/modules/home";
 
@@ -36,8 +33,6 @@ export default ({ clientStats }) =>
     const template = () => {
       const appOutput = app();
 
-      // Clear Chunks
-      clearChunks();
       const { cssHash, js, styles } = flushChunks(clientStats, {
         chunkNames: flushChunkNames(),
       });
@@ -45,7 +40,7 @@ export default ({ clientStats }) =>
       return `
       <html>
         <head>
-          <title>SSR</title>
+          <title>My Movies</title>
           ${styles}
         </head>
         <body>
