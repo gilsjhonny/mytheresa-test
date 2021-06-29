@@ -60,4 +60,6 @@ You can create a theme config for each genre, and depending on the genre the Mov
 <img src="https://i.ibb.co/5vvqt25/Screenshot-from-2021-06-29-12-29-25.png" alt="Screenshot-from-2021-06-29-12-29-25" border="0">
 </p>
 
+### Disclaimer
+WishlistButton is duplicated just for the purpose of the exercise. But it's worth to mention that for the original WishlistButton I'm using the Base+Variant pattern. 
 
