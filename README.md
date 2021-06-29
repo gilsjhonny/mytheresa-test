@@ -36,6 +36,7 @@ $ npm run prod
   - Movies added to wishlist
 - Used Redux ducks proposal for organizing reducers/action creator/side effects 
 - Fonts are loaded at page level
+- Parts of the project have comments and explanations in it, feel free to read them
 
 ### SSR
 - Built from scratch and surely there's things to improve
