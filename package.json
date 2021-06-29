@@ -24,7 +24,6 @@
     "express": "^4.17.1",
     "express-static-gzip": "^2.1.1",
     "extract-css-chunks-webpack-plugin": "^4.9.0",
-    "lodash": "^4.17.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.4",

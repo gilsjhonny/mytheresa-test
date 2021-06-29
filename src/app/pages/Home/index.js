@@ -9,6 +9,7 @@ import {
   Container,
 } from "../../components";
 import Header from "./Header";
+import "./index.sass";
 
 const CAROUSEL_STEPS = 220;
 

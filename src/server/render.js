@@ -17,13 +17,14 @@ export default ({ clientStats }) =>
     if (req.url === "/__webpack_hmr") return;
 
     const store = configureStore();
-    const url = req.url;
+    const url = req.originalUrl;
     let preInitStorePromise;
     let match;
 
     // Get preInitStore static method if the requested
     // url matches one of the routes
     Object.values(routes).some((route) => {
+      console.log(req.url, req.originalUrl);
       match = matchPath(url, route);
       const { preInitStore } = route.component;
 
