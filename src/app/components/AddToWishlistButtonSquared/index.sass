@@ -1,0 +1,28 @@
+@use '../../styles/global/variables'
+
+.AddToWishlistButtonSquared
+  height: 60px
+  overflow: hidden
+
+  & > .content
+    flex: 1 1 0
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    padding: 0 20px 0 10px
+    height: 100%
+
+    color: variables.$white
+    font-size: 18px
+    font-weight: 600px
+
+    background: darken(variables.$doveGray, 0.5)
+    transition: background .2s ease-in
+
+    &:hover
+      background: darken(variables.$confetti, 10%)
+
+    &.active
+      background: variables.$alto

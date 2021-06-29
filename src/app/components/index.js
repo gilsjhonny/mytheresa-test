@@ -1,4 +1,4 @@
-export { default as AddToWishListButton } from "./AddToWishListButton";
+export { default as AddToWishlistButton } from "./AddToWishlistButton";
 export { default as BackdropImage } from "./BackdropImage";
 export { default as Carousel } from "./Carousel";
 export { default as CategoryTitle } from "./CategoryTitle";
