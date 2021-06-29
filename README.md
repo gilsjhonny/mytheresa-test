@@ -41,5 +41,23 @@ $ npm run prod
 ### SSR
 - Built from scratch and surely there's things to improve
 - The home page renders on server side 
-- Movie's page renders on client side, wanted to go for an approach like `getInitialProps` in NextJS. I just didn't wanted to use Redux for something that shouldn't be in the global store. 
-- Found really hard to dynamically apply stylesheets on server-side, I wanted to use that in order to load different fonts depending on the movie's category. I think I have an idea of how to do it that would involve fetching on server-side and concatenating the chunk name of the style, but still not sure what should be the proper way to do it
+- Movie's page renders on client side, wanted to go for an approach like `getInitialProps` in NextJS. I just didn't wanted to use Redux for something that shouldn't be in the global store so I left it that way.
+
+
+### Problems/Solutions
+Found really hard to dynamically apply stylesheets on server-side, I wanted to use that in order to load different fonts depending on the movie's category. I think I have an idea of how to do it that would involve fetching on server-side and concatenating the chunk name of the style, but still not sure what should be the proper way to do it. Since I didn't want to give up on that I took a different approach:
+
+You can create a theme config for each genre, and depending on the genre the Movie page will import a different theme wrapper/button. This might no be the purpose of React Universal Components but this surely is a workarount to avoid loading unnecessary fonts.
+
+<p align="center">
+<img src="https://i.ibb.co/XkhGWSt/carbon-3.png" alt="carbon-3" border="0">
+</p>
+<p align="center">
+<img src="https://i.ibb.co/sv6cRvR/carbon-2.png" alt="carbon-2" border="0">
+</p>
+<p align="center">
+  <b>Fonts/CSS/Button loaded only when the genre matches 🎉</b>
+<img src="https://i.ibb.co/5vvqt25/Screenshot-from-2021-06-29-12-29-25.png" alt="Screenshot-from-2021-06-29-12-29-25" border="0">
+</p>
+
+
