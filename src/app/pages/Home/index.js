@@ -5,7 +5,6 @@ import { fetchMovies } from "../../../redux/modules/home";
 import {
   Carousel,
   CategoryTitle,
-  Footer,
   MovieCard,
   Container,
 } from "../../components";
@@ -20,12 +19,11 @@ class Home extends React.Component {
 
   componentDidMount() {
     const { dispatch, movies } = this.props;
-
     if (!movies) dispatch(fetchMovies);
   }
 
   render() {
-    const { movies } = this.props;
+    const { error, movies } = this.props;
 
     const renderMoviesCarousel = (movies) => (
       <Carousel steps={CAROUSEL_STEPS}>
@@ -58,19 +56,18 @@ class Home extends React.Component {
 
     return (
       <div className="Home">
-        {movies && (
+        {mostPopularMovieNowPLaying && (
           <Header featuredMovie={mostPopularMovieNowPLaying} />
         )}
         <Container>
-          {movies ? (
+          {movies && (
             <>
               {renderCategorySection("Now Playing", "nowPlaying")}
               {renderCategorySection("Upcoming", "upcoming")}
               {renderCategorySection("Top Rated", "topRated")}
             </>
-          ) : (
-            <div>Error: loading movies</div> // We could have an error message component
           )}
+          {error && <div>Error: loading movies</div>}
         </Container>
       </div>
     );
@@ -78,5 +75,8 @@ class Home extends React.Component {
 }
 
 export default connect((state) => ({
+  error: state.home.error,
+  loaded: state.home.loaded,
+  loading: state.home.loading,
   movies: state.home.movies,
 }))(Home);

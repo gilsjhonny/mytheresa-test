@@ -2,10 +2,10 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import {
-  Divider,
-  Footer,
-  MovieCard,
+  BackdropImage,
   Container,
+  Divider,
+  MovieCard,
 } from "../../components";
 import { WishlistIcon } from "../../components/Icons";
 import "./index.sass";
@@ -18,12 +18,14 @@ const Wishlist = (props) => {
   const movieValues = Object.values(movies);
 
   // Pick first movie of the array to show a backdrop image
-  const imgBackdrop =
-    !!movieValues.length && movieValues[0].backdrop_path;
+  const imgBackdrop = !!movieValues.length
+    ? movieValues[0].backdrop_path
+    : undefined;
 
   return (
     <div className="Wishlist">
       <header>
+        <BackdropImage backdropSrc={imgBackdrop} height={400} />
         <div
           className="backdrop-img"
           style={{

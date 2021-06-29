@@ -1,4 +1,5 @@
 import React from "react";
+import fetch from "cross-fetch";
 import { connect } from "react-redux";
 import {
   addToWihslist,
@@ -6,11 +7,13 @@ import {
 } from "../../../redux/modules/wishlist";
 import {
   AddToWishListButton,
-  Footer,
-  MovieThumbnail,
+  BackdropImage,
   Container,
+  MovieThumbnail,
 } from "../../components";
 import "./index.sass";
+
+import { api } from "../../constants";
 
 const MOVIE_THUMBNAIL_HEIGHT = 500;
 const MOVIE_THUMBNAIL_WIDTH = 320;
@@ -27,16 +30,16 @@ class Movie extends React.Component {
     if (movieId) {
       try {
         const response = await fetch(
-          `https://api.themoviedb.org/3/movie/${movieId}?api_key=57c98f3bc2b2cd4213729ff48dc9c3e2&language=en-US`
+          `${api.baseUrl}3/movie/${movieId}?api_key=57c98f3bc2b2cd4213729ff48dc9c3e2&language=en-US`
         );
         const movie = await response.json();
 
         this.setState({
           movieDetails: {
             id: movie.id,
-            backdrop_path: `https://image.tmdb.org/t/p/original${movie.backdrop_path}`,
+            backdrop_path: `${api.imageBaseUrl}original${movie.backdrop_path}`,
             overview: movie.overview,
-            poster_src: `https://image.tmdb.org/t/p/w500${movie.poster_path}`,
+            poster_src: `${api.imageBaseUrl}w500${movie.poster_path}`,
             genres: movie.genres,
             release_date: movie.release_date,
             title: movie.title,
@@ -74,11 +77,9 @@ class Movie extends React.Component {
 
     return (
       <div className="Movie">
-        <div
-          className="backdrop-img"
-          style={{
-            backgroundImage: `url('${movieDetails.backdrop_path}')`,
-          }}
+        <BackdropImage
+          backdropSrc={movieDetails.backdrop_path}
+          height={490}
         />
         <Container>
           <div className="details">

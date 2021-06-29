@@ -1,4 +1,5 @@
 import fetch from "cross-fetch";
+import { api } from "../../app/constants";
 
 const initialState = {
   loaded: false,
@@ -55,10 +56,10 @@ const fetchMoviesError = (error) => ({
 export const fetchMovies = async (dispatch) => {
   dispatch(fetchMoviesBegin());
 
-  const urls = [
-    `https://api.themoviedb.org/3/movie/now_playing?api_key=57c98f3bc2b2cd4213729ff48dc9c3e2&language=en-US&page=1`,
-    `https://api.themoviedb.org/3/movie/upcoming?api_key=57c98f3bc2b2cd4213729ff48dc9c3e2&language=en-US&page=1`,
-    `https://api.themoviedb.org/3/movie/top_rated?api_key=57c98f3bc2b2cd4213729ff48dc9c3e2&language=en-US&page=1`,
+  const categoryUrls = [
+    `${api.baseUrl}3/movie/now_playing?api_key=57c98f3bc2b2cd4213729ff48dc9c3e2&language=en-US&page=1`,
+    `${api.baseUrl}3/movie/upcoming?api_key=57c98f3bc2b2cd4213729ff48dc9c3e2&language=en-US&page=1`,
+    `${api.baseUrl}3/movie/top_rated?api_key=57c98f3bc2b2cd4213729ff48dc9c3e2&language=en-US&page=1`,
   ];
 
   const fetchMovies = async (url) => {
@@ -68,17 +69,17 @@ export const fetchMovies = async (dispatch) => {
 
       const movies = json.results.map((movie) => ({
         id: movie.id,
-        backdrop_path: `https://image.tmdb.org/t/p/original${movie.backdrop_path}`,
+        backdrop_path: `${api.imageBaseUrl}original${movie.backdrop_path}`,
         title: movie.title,
         release_date: movie.release_date,
-        poster_src: `https://image.tmdb.org/t/p/w300${movie.poster_path}`,
+        poster_src: `${api.imageBaseUrl}w300${movie.poster_path}`,
       }));
       return movies;
     } catch (error) {}
   };
 
   try {
-    const r = await Promise.all(urls.map(fetchMovies));
+    const r = await Promise.all(categoryUrls.map(fetchMovies));
     const [nowPlaying, upcoming, topRated] = r;
     dispatch(
       fetchMoviesSuccess({

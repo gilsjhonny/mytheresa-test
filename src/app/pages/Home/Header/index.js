@@ -1,19 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { Container, MovieThumbnail } from "../../../components";
+import {
+  BackdropImage,
+  Container,
+  MovieThumbnail,
+} from "../../../components";
 import "./index.sass";
 
 const MOVIE_THUMBNAIL_HEIGHT = 280;
-const MOVIE_THUMBNAIL_WIDTH = 200;
+const MOVIE_THUMBNAIL_WIDTH = 195;
 
 const HomeHeader = ({ featuredMovie }) => (
   <header className="HomeHeader">
-    <div
-      className="backdrop-img"
-      style={{
-        backgroundImage: `url('${featuredMovie.backdrop_path}')`,
-      }}
+    <BackdropImage
+      backdropSrc={featuredMovie.backdrop_path}
+      height={360}
     />
     <Container className="featured-movie-container">
       <Link to={`movie/${featuredMovie.id}`}>
