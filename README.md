@@ -61,7 +61,9 @@ You can create a theme config for each genre, and depending on the genre the Mov
 </p>
 
 ### To Add
-Testing, but due to lack of time I gave priority to make it SSR
+- Testing, but due to lack of time I gave priority to make it SSR
+- Selectors for redux
+- Themes could have more things to differentiate them 
 
 ### Disclaimer
 WishlistButton is duplicated just for the purpose of the exercise. But it's worth to mention that for the original WishlistButton I'm using the Base+Variant pattern. 
