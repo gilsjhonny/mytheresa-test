@@ -34,7 +34,7 @@ $ npm run prod
 - Used Redux for store managament to store:
   - Fetched movies from the homepage
   - Movies added to wishlist
--Used Redux ducks proposal for organizing reducers/action creator/side effects 
+- Used Redux ducks proposal for organizing reducers/action creator/side effects 
 - Fonts are loaded at page level
 
 ### SSR
