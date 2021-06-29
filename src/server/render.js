@@ -1,30 +1,43 @@
 import React from "react";
 import { renderToString } from "react-dom/server";
-import { StaticRouter } from "react-router";
+import { matchPath, StaticRouter } from "react-router";
 
 import Routes from "../app/Routes";
 import { Provider } from "react-redux";
 import configureStore from "../redux/store";
-import { flushChunkNames } from "react-universal-component/server";
+import {
+  clearChunks,
+  flushChunkNames,
+} from "react-universal-component/server";
 import flushChunks from "webpack-flush-chunks";
-import { fetchMovies } from "../redux/modules/home";
+import { routes } from "../app/constants";
 
 export default ({ clientStats }) =>
   async (req, res) => {
     if (req.url === "/__webpack_hmr") return;
 
-    // Setup store
     const store = configureStore();
+    const url = req.url;
+    let preInitStorePromise;
+    let match;
 
-    // Load Movies
-    const loadMovies = (site, slug) => {
-      return store.dispatch(fetchMovies);
-    };
+    // Get preInitStore static method if the requested
+    // url matches one of the routes
+    Object.values(routes).some((route) => {
+      match = matchPath(url, route);
+      const { preInitStore } = route.component;
+
+      if (match && preInitStore) {
+        preInitStorePromise = preInitStore;
+      }
+
+      return !!match;
+    });
 
     const app = () =>
       renderToString(
         <Provider store={store}>
-          <StaticRouter location={req.originalUrl} context={{}}>
+          <StaticRouter location={url} context={{}}>
             <Routes />
           </StaticRouter>
         </Provider>
@@ -33,6 +46,7 @@ export default ({ clientStats }) =>
     const template = () => {
       const appOutput = app();
 
+      clearChunks();
       const { cssHash, js, styles } = flushChunks(clientStats, {
         chunkNames: flushChunkNames(),
       });
@@ -54,9 +68,9 @@ export default ({ clientStats }) =>
     </html>`;
     };
 
-    if (req.path.match(/^\/$/) || req.path.match(/^\/index.html$/)) {
+    if (preInitStorePromise) {
       try {
-        await loadMovies();
+        await preInitStorePromise(store);
         res.send(template());
       } catch (err) {
         console.log(err);

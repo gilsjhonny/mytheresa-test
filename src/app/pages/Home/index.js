@@ -14,6 +14,10 @@ import Header from "./Header";
 const CAROUSEL_STEPS = 220;
 
 class Home extends React.Component {
+  static async preInitStore(store) {
+    return store.dispatch(fetchMovies);
+  }
+
   componentDidMount() {
     const { dispatch, movies } = this.props;
 
