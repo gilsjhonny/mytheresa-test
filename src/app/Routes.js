@@ -25,12 +25,13 @@ export default () => {
           {getUniversalComponent(HOME.name)}
         </Route>
         <Route
+          exact
           path={MOVIE.path}
           render={({ match }) =>
             getUniversalComponent(MOVIE.name, match)
           }
         />
-        <Route path={WISHLIST.path}>
+        <Route exact path={WISHLIST.path}>
           {getUniversalComponent(WISHLIST.name)}
         </Route>
         <Route>{getUniversalComponent("NotFound")}</Route>

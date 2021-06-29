@@ -7,15 +7,18 @@ export default Object.freeze({
     component: Home,
     name: "Home",
     path: "/",
+    exact: true,
   },
   MOVIE: {
     component: Movie,
     name: "Movie",
     path: "/movie/:id",
+    exact: true,
   },
   WISHLIST: {
     component: Wishlist,
     name: "Wishlist",
     path: "/wishlist",
+    exact: true,
   },
 });
