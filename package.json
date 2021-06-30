@@ -6,7 +6,8 @@
   "scripts": {
     "prod": "NODE_ENV=production node src/server/main.js",
     "start": "node src/server/main.js",
-    "dev": "nodemon --watch src/server --watch config --inspect src/server/main.js"
+    "dev": "nodemon --watch src/server --watch config --inspect src/server/main.js",
+    "heroku-prebuild": "npm install --only=dev"
   },
   "keywords": [],
   "author": "",
